@@ -4,11 +4,15 @@ status 80-ff means the stream has to be closed
 
 01-0f and 81-8f are reserved for status that can be in both cases
 
-| Code(hex) | Message  |
-|:-------------:| ------------- | 
+| Code(hex) | Message  | |
+|:-------------:| ------------- |  ------------- | 
 | 00     | OK |
 | 01| Disconnected (Still subscribing) |
 | 81| Disconnected |
-| 82| Permission Denied|
-| 83 | Alias Loop|
+| 90| Permission Denied|
+| 91| Invalid Input| protocol level|
+| 92| Invalid Parameter| action level |
+| 98| Busy| client can't take any more request |
+| A1 | Alias Loop|
+| A2 | Alias Loop|
 
