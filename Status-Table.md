@@ -14,5 +14,4 @@ status 80-ff means the stream has to be closed
 | 92| Invalid Parameter| action level |
 | 98| Busy| client can't take any more request |
 | A1 | Alias Loop|
-| A2 | Alias Loop|
 
