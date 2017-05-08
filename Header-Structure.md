@@ -17,6 +17,18 @@ The dynamic part of the header can contain the following data, formatted as key/
 * 0x01 **page ID**, 4 bytes: Included when a payload is too big to be delivered in a single message.
 * 0x08 **alias count**, 1 byte: To detect circular references in aliases, this value is incremented every time the request is routed via an alias. If the count exceeds a configured maximum, an aliasLoop error is returned to the requestor. The maximum is configured on a per-broker basis.
 * 0x10 **qos**, 1 byte: See [Qos](https://github.com/dsa-2/docs/wiki/Qos)
+* 0x11 **update frequency**, 1 byte: max frequency of update, responder will merge value if more than one updates is received in a time interval.
+  * 0x00: no limitation (default value)
+  * 0x10: 100 ms
+  * 0x20: 1 second
+  * 0x30: 5 second   
+  * 0x40: 15 second
+  * 0x50: 30 second
+  * 0x60: 1 minute
+  * 0x70: 5 minute
+  * 0x80: 15 minute
+  * 0x90: 30 minute
+  * 0xA0: 1 hour
 * 0x18 **priority**: A bool value, TRUE if the message is a high-priority message, FALSE if normal priority.
 * 0x60 **permission token**: 2-byte string length + string data
 * 0x62 **max permission**, 1 byte: The max permission that the current request is allowed to run.
