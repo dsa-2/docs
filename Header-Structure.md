@@ -1,35 +1,23 @@
+In DSA 2.0, messages are composed of a header and a body (payload). Message headers contain a fixed structure followed by a variable structure, as follows.
 
-## fixed structure in header
-* total length, 4 bytes
-* header length, 2 bytes
-* method, 2 bytes
-* reqId, 4 bytes
-* seqId, 4 bytes
-  * sequence id, always start from 0
+## Fixed structure
+* Total length of message: 4 bytes
+* Header length: 2 bytes
+* Method: 2 bytes
+* Requestor ID (reqId): 4 bytes
+* Sequence ID (seqId): 4 bytes
 
-## dynamic structure in header
+The sequence ID is use to assemble multi-part messages. Sequence numbering starts from 0.
 
-key(1byte): value pairs
+## Dynamic structure
 
-* 0x00 status, +1
-  * [Status Table](https://github.com/dsa-2/docs/wiki/Status-Table)
-  * when not specified, state = 0, OK
-* 0x01 page id, +4
-  * when payload is too big
-* 0x08 alias count, + 1
-  * every time the request is route to a alias node, this count +1
-  * when max count is reached, a AliasLoop error should be sent back 
-  * max alias count can be defined for each broker
-* 0x10 qos +1 
-  * [Qos](https://github.com/dsa-2/docs/wiki/Qos)
-* 0x18 priority, +0
-  * a bool value, either specified or not specified, no following data
+The dynamic part of the header can contain the following data, formatted as key/value pairs. The key is 1 byte long.
 
-* 0x60 permission token
-  * +2 byte string length, + string data
-* 0x62 max permission + 1
-  * the max permission current request is allowed to run
-
-* 0x70 path
-  * +2 byte string length, + string data
-
+* 0x00 **status**, 1 byte ([List of status codes)](https://github.com/dsa-2/docs/wiki/Status-Table)
+* 0x01 **page ID**, 4 bytes: Included when a payload is too big to be delivered in a single message.
+* 0x08 **alias count**, 1 byte: To detect circular references in aliases, this value is incremented every time the request is routed via an alias. If the count exceeds a configured maximum, an aliasLoop error is returned to the requestor. The maximum is configured on a per-broker basis.
+* 0x10 **qos**, 1 byte: See [Qos](https://github.com/dsa-2/docs/wiki/Qos)
+* 0x18 **priority**: A bool value, TRUE if the message is a high-priority message, FALSE if normal priority.
+* 0x60 **permission token**: 2-byte string length + string data
+* 0x62 **max permission**, 1 byte: The max permission that the current request is allowed to run.
+* 0x70 **path**: 2-byte string length + string data
