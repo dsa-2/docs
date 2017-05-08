@@ -30,6 +30,6 @@ The dynamic part of the header can contain the following data, formatted as key/
   * 0x90: 30 minute
   * 0xA0: 1 hour
 * 0x18 **priority**: A bool value, TRUE if the message is a high-priority message, FALSE if normal priority.
-* 0x60 **permission token**: 2-byte string length + string data
-* 0x62 **max permission**, 1 byte: The max permission that the current request is allowed to run.
+* 0x60 **permission token**: 2-byte string length + string data. (0x60 and 0x62 can not be used together in a request)
+* 0x62 **max permission**, 1 byte: The max permission that the current request is allowed to run. (0x60 and 0x62 can not be used together in a request)
 * 0x70 **path**: 2-byte string length + string data
