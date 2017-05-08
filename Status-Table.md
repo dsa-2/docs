@@ -1,20 +1,17 @@
-status 00-0F means the stream is open
-
-status 80-ff means the stream has to be closed 
+The status codes in the range from 00 to 0F correspond to the codes from 80 to FF. The 00-0F range is used for conditions that permit the stream to remain open, while 80-ff means the stream must be closed. 
 
 
-| Code(hex) | Message  | |
+| Code(hex) | Message  | Remarks |
 |:-------------:| ------------- |  ------------- | 
-| 00     | OK | still streaming |
-| 01     | Still initializing | although the value is valid, there are still more data to come before current values can be fully usable  |
+| 00     | OK | Still streaming |
+| 01     | Initializing | The current value is valid, but there is more data to come before current values can be fully usable  |
 | 04     | Paging data unfinished |   |
-| 05     | Paging data finished|   |
-| 0E| not available| Could be disconnected, but still subscribing |
-| 10 | Closed | closed normally, with no error  |
-| 1E| Disconnected | Stream need to be closed |
-| 20| Permission Denied|
-| 21| Invalid Input| protocol level|
-| 22| Invalid Parameter| action level |
-| 28| Busy| client can't take any more request |
-| 41 | Alias Loop|
-
+| 05     | Paging data finished |   |
+| 0E| Not available| Might be disconnected and in the process of subscribing |
+| 10 | Closed | Closed normally, with no error  |
+| 1E| Disconnected | Stream must be closed |
+| 20| Permission denied|
+| 21| Invalid input| Protocol level|
+| 22| Invalid parameter| Action level |
+| 28| Busy| Client cannot accept additional requests|
+| 41 | Alias loop| The number of aliased routings for this request has exceeded the maximum allowed. 
