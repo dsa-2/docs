@@ -1,1 +1,10 @@
-Welcome to the docs wiki!
+* [HandShake](https://github.com/dsa-2/docs/wiki/Handshake)
+* [Message](https://github.com/dsa-2/docs/wiki/Message)
+  * [Header Structure](https://github.com/dsa-2/docs/wiki/Header-Structure)
+  * [Subscribe](https://github.com/dsa-2/docs/wiki/Subscribe)
+  * [Get](https://github.com/dsa-2/docs/wiki/Method-Get)
+  * [Put](https://github.com/dsa-2/docs/wiki/Method-Put)
+  * [List](https://github.com/dsa-2/docs/wiki/Method-List)
+  * [Invoke](https://github.com/dsa-2/docs/wiki/Method-Invoke)
+  * [Set](https://github.com/dsa-2/docs/wiki/Set)
+  * [Remove](https://github.com/dsa-2/docs/wiki/Method-Remove)
