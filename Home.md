@@ -8,3 +8,6 @@
   * [Invoke](https://github.com/dsa-2/docs/wiki/Method-Invoke)
   * [Set](https://github.com/dsa-2/docs/wiki/Set)
   * [Remove](https://github.com/dsa-2/docs/wiki/Method-Remove)
+* Security
+  * [Authentication](https://github.com/dsa-2/docs/wiki/Authentication)
+  * [Authorization](https://github.com/dsa-2/docs/wiki/Authorization)
