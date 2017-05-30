@@ -46,12 +46,12 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Page ID</td>
     <td>1</td>
     <td>both</td>
-    <td>- | O</td>
-    <td>O | -</td>
-    <td>- | -</td>
-    <td>O | O</td>
-    <td>- | O</td>
-    <td>O | -</td></tr>
+    <td>-|O</td>
+    <td>O|-</td>
+    <td>-|-</td>
+    <td>O|O</td>
+    <td>-|O</td>
+    <td>O|-</td></tr>
     <tr><td colspan="9">
       Included when a payload is too big to be delivered in a single message.
     </td></tr>
