@@ -17,12 +17,17 @@ Qos level is an optional header in a subscription request
 * 2 : requester need all values even if connection is dropped ( durable )
 * 3 : requester need all values even if responder is rebooted ( persistent )
 
-### Max Queue Size
+### Queue Size
 Queue size is an optional header in a subscription request.  Each responder have a max and default qos queue size set up for each requester.
 
-If the max queue size in the request is smaller than the currently max queue, responder should use the max queue size in the request.  
+If the queue size in the request is smaller than the max size, responder should use the queue size in the request. 
 
-If the max queue size in the request is bigger than the currently max queue, responder should ignore it.  
+If the queue size in the request is bigger than the max size, responder should ignore it, (not treated as error)  
+
+When broker accepts a queue size from the requester ( smaller than max size ) , it should forward that information to responder.
+
+### Queue Time
+Queue time is an optional header in a subscription request. defines how long a value can stay in a queue. it works similar to the queue size, when queue time is accepted by a broker, the broker should forward that information to responder.
 
 ### Update frequency
 Update frequency is an optional header in a subscription request. when set,  responder will merge value if more than one updates is received in a time interval.
