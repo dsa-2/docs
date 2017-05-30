@@ -13,3 +13,5 @@ The status codes in the range from 00 to 0F correspond to the codes from 80 to F
 | 22| Invalid parameter| Action level |
 | 28| Busy| Client cannot accept additional requests|
 | 41 | Alias loop| The number of aliased routings for this request has exceeded the maximum allowed. 
+| F8 | Connection error, the time in handshake has expired | 
+| F9 | Connection error, Incorrect auth value| 
