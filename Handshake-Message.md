@@ -31,5 +31,16 @@ Message Type Id : **F2**
 ## Handshake response body structure
 Message Type Id : **F3**
 
+
+
 * path : where the client will be on the broker, [string data](DSA-Binary-Encoding#string-encoding).
    * if client is not responder, this should just be an empty string
+
+#### possible errors
+
+| Code(hex) | Message|
+|:-------------:| ------------- |
+| 20| Permission denied|
+| 21| Invalid input| Protocol level|
+| F8 | Connection error, the time in handshake has expired | 
+| F9 | Connection error, Incorrect auth value| 
