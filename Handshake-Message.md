@@ -38,7 +38,7 @@ Message Type Id : **F3**
 
 #### possible errors
 
-| Code(hex) | Message|
+| Code | Message|
 |:-------------:| ------------- |
 | 20| Permission denied|
 | 21| Invalid input| Protocol level|
