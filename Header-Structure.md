@@ -6,7 +6,7 @@ fixed header are used by all dsa2 message
 * Header length: 2 bytes
 * Method: 1 bytes
   * 01 / 81, subscribe ( request:01, response:81 )
-  * 02 , publish
+  * 02 / 81 83, publish
   * 03 / 83, list
   * 04 / 84, invoke
   * 05 / 85, Get
