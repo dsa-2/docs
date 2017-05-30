@@ -38,7 +38,7 @@ Message Type Id : **F3**
 
 #### possible errors
 
-in http mode, the error will be output as json data with a 401 Unauthorized error
+in websocket mode, when error happens, the websocket connection won't be established, and the error will be output as json data with a 401 Unauthorized error
 
 | Code | Message|
 |:-------------:| ------------- |
