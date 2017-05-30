@@ -180,4 +180,17 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="9">
       Path of a request
     </td></tr>
+<tr><td rowspan="2">81</td>
+    <td>Publish Path</td>
+    <td>Str</td>
+    <td>response</td>
+    <td>A</td>
+    <td>-</td>
+    <td>A</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td></tr>
+    <tr><td colspan="9">
+      list and subscribe response that comes for a publish request will always have a source path.
+    </td></tr>
 </table>
