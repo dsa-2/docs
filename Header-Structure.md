@@ -86,7 +86,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="9">
-      Qos of s subscription, see <a href="https://github.com/dsa-2/docs/wiki/Qos">Qos</a>
+      Qos of s subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">11</td>
     <td>Update Frequency</td>
@@ -99,9 +99,34 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="9">
-      Update frequency of a subscription, see <a href="https://github.com/dsa-2/docs/wiki/Qos">Qos</a>
+      Update frequency of a subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
-
+<tr><td rowspan="2">12</td>
+    <td>Queue Size</td>
+    <td>1</td>
+    <td>request</td>
+    <td>O</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td></tr>
+    <tr><td colspan="9">
+      Prefered Queue size of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
+    </td></tr>
+<tr><td rowspan="2">13</td>
+    <td>Queue Time</td>
+    <td>1</td>
+    <td>request</td>
+    <td>O</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td></tr>
+    <tr><td colspan="9">
+      Prefered Queue time of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
+    </td></tr>
 <tr><td rowspan="2">18</td>
     <td>Priority</td>
     <td>1</td>
