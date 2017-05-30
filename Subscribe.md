@@ -9,7 +9,7 @@ request body is always empty
 Message Type Id : **81**
 
 * header length, 4 bytes
-* header body, [dsa key values pairs format](https://github.com/dsa-2/docs/wiki/Key-Value-Format)
+* header body, [dsa key values pairs format](https://github.com/dsa-2/docs/wiki/DSA-Binary-Encoding#key-value-pairs-encoding)
 * value body (msgpack encoded)
 
 ## Qos Headers
