@@ -141,6 +141,19 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="9">
       Prefered Queue time of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
+<tr><td rowspan="2">21</td>
+    <td>Base Path</td>
+    <td>Str</td>
+    <td>response</td>
+    <td>-</td>
+    <td>-</td>
+    <td>O</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td></tr>
+    <tr><td colspan="9">
+      base path of a list response, only needed in the first response of a request, unless response is refreshed, see <a href="https://github.com/dsa-2/docs/wiki/Method-List">List</a>
+    </td></tr>
 <tr><td rowspan="2">60</td>
     <td>Permission Token</td>
     <td>Str</td>
