@@ -24,7 +24,7 @@ The dynamic part of the header can contain the following data, formatted as key/
 
 * O : optional
 * A : always
-* \- : never
+* \- : not used
 
 <table>
 <tr><th>Code</th>
