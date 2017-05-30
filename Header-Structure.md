@@ -154,17 +154,4 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="9">
       Path of a request
     </td></tr>
-<tr><td rowspan="2">81</td>
-    <td>Source Path</td>
-    <td>Str</td>
-    <td>request</td>
-    <td>-</td>
-    <td>A</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td></tr>
-    <tr><td colspan="9">
-      Path of a publish method
-    </td></tr>
 </table>
