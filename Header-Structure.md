@@ -4,7 +4,13 @@ In DSA 2.0, messages are composed of a header and a body (payload). Message head
 fixed header are used by all dsa2 message
 * Total length of message: 4 bytes
 * Header length: 2 bytes
-* Method: 2 bytes
+* Method: 1 bytes
+  * 01 81, subscribe ( request:01, response:81 )
+  * 02 82, publish
+  * 03 83, list
+  * 04 84, invoke
+  * 05 85, Get
+  * 06 86, Set
 * Requestor ID (reqId): 4 bytes
 * Sequence ID (seqId): 4 bytes
 
