@@ -11,7 +11,8 @@ fixed header are used by all dsa2 message
   * 04 / 84, invoke
   * 05 / 85, Get
   * 06 / 86, Set
-  * F0 / F1, handshake
+  * F0 / F1, broker info
+  * F2 / F3, handshake
 * Requestor ID (reqId): 4 bytes
 * Sequence ID (seqId): 4 bytes
 
