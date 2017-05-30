@@ -3,12 +3,14 @@
   * [Header Structure](https://github.com/dsa-2/docs/wiki/Header-Structure)
   * [HandShake Message](https://github.com/dsa-2/docs/wiki/Handshake-Message)
   * [Subscribe](https://github.com/dsa-2/docs/wiki/Subscribe)
-  * [Get](https://github.com/dsa-2/docs/wiki/Method-Get)
-  * [Put](https://github.com/dsa-2/docs/wiki/Method-Put)
+  * [Publish](https://github.com/dsa-2/docs/wiki/Method-Publish)
   * [List](https://github.com/dsa-2/docs/wiki/Method-List)
   * [Invoke](https://github.com/dsa-2/docs/wiki/Method-Invoke)
+  * [Get](https://github.com/dsa-2/docs/wiki/Method-Get)
   * [Set](https://github.com/dsa-2/docs/wiki/Set)
-  * [Remove](https://github.com/dsa-2/docs/wiki/Method-Remove)
+
 * Security
   * [Authentication](https://github.com/dsa-2/docs/wiki/Authentication)
   * [Authorization](https://github.com/dsa-2/docs/wiki/Authorization)
+
+
