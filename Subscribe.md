@@ -1,7 +1,12 @@
 ## request body structure
+
+Message Type Id : **01**
+
 request body is always empty
 
 ## response body structure
+
+Message Type Id : **81**
 
 * header length, 4 bytes
 * header body, [dsa key values pairs format](https://github.com/dsa-2/docs/wiki/Key-Value-Format)
