@@ -26,12 +26,13 @@ The dynamic part of the header can contain the following data, formatted as key/
     <th>Set</th></tr>
 <tr><td>00</td>
     <td>status</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
 </tr>
 
 </table>
