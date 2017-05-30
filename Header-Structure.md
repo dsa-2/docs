@@ -1,6 +1,7 @@
 In DSA 2.0, messages are composed of a header and a body (payload). Message headers contain a fixed structure followed by a variable structure, as follows.
 
 ## Fixed structure
+fixed header are used by all dsa2 message
 * Total length of message: 4 bytes
 * Header length: 2 bytes
 * Method: 2 bytes
@@ -12,6 +13,28 @@ The sequence ID is use to assemble multi-part messages. Sequence numbering start
 ## Dynamic structure
 
 The dynamic part of the header can contain the following data, formatted as key/value pairs. The key is 1 byte long.
+
+<table>
+<tr><th>Code</th>
+    <th>Name</th>
+    <th>Len</th>
+    <th>Sub</th>
+    <th>Pub</th>
+    <th>List</th>
+    <th>Invoke</th>
+    <th>Get</th>
+    <th>Set</th></tr>
+<tr><td>00</td>
+    <td>status</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+
+</table>
 
 * 0x00 **status**, 1 byte ([List of status codes)](https://github.com/dsa-2/docs/wiki/Status-Table)
 * 0x01 **page ID**, 4 bytes: Included when a payload is too big to be delivered in a single message.
