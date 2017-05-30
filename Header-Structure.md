@@ -76,6 +76,19 @@ The dynamic part of the header can contain the following data, formatted as key/
       To detect circular references in aliases, this value is incremented every time the request is routed via an alias. If the count exceeds a configured maximum, an aliasLoop error is returned to the requestor. The maximum is configured on a per-broker basis.
     </td></tr>
 <tr><td rowspan="2">10</td>
+    <td>Priority</td>
+    <td>1</td>
+    <td>both</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td></tr>
+    <tr><td colspan="9">
+      When the value is 01~7F, the request/response will have a lower priority than normal message, when value is 81~FF, the message will have a higher priority than normal message.
+    </td></tr>
+<tr><td rowspan="2">10</td>
     <td>Qos</td>
     <td>1</td>
     <td>request</td>
@@ -126,19 +139,6 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td></tr>
     <tr><td colspan="9">
       Prefered Queue time of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
-    </td></tr>
-<tr><td rowspan="2">18</td>
-    <td>Priority</td>
-    <td>1</td>
-    <td>both</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td></tr>
-    <tr><td colspan="9">
-      When the value is 01~7F, the request/response will have a lower priority than normal message, when value is 81~FF, the message will have a higher priority than normal message.
     </td></tr>
 <tr><td rowspan="2">60</td>
     <td>Permission Token</td>
