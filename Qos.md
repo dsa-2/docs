@@ -1,6 +1,9 @@
 
 
 ## Update frequency
+Update frequency is an optional header in a subscription request. when set,  responder will merge value if more than one updates is received in a time interval.
+
+value of the update frequency is one byte index:
 
   * 0x00: no limitation (default value)
   * 0x10: 100 ms
