@@ -7,12 +7,13 @@ in a http/websocket server, this is usually hosted on /conn end point of the ser
 * publicKey : server's public key, Base64 encoded ECPoint in X9.63 format (uncompressed)
 * dsId : server's [dsId](https://github.com/dsa-2/docs/wiki/dsId)
 * time: a number representing the milliseconds elapsed between 1 January 1970 00:00:00 UTC 
-* version : protocol version
+* version : protocol version, start from `2.0`
 
 ## handeshake request
 
 client need to send these information to the broker to initialize a handshake
 
+* version : protocol version, start from `2.0`
 * publicKey : client's publick key (Optional)
   * publickKey is only needed the first time dsLink connect, 
 * dsId : client's [dsId](https://github.com/dsa-2/docs/wiki/dsId)
