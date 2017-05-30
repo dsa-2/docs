@@ -15,4 +15,6 @@ Message Type Id : **81** / **83**
 
 publish doesn't have it's own response structure, instead, it use the response structure for Subscribe and List api
 
+the only difference is that subscribe and list response for a publish request has a extra header for the path that's updated
+
 
