@@ -14,46 +14,150 @@ The sequence ID is use to assemble multi-part messages. Sequence numbering start
 
 The dynamic part of the header can contain the following data, formatted as key/value pairs. The key is 1 byte long.
 
+* O : optional
+* A : always
+* \- : never
+
 <table>
 <tr><th>Code</th>
     <th>Name</th>
     <th>Len</th>
+    <th>Type</th>
     <th>Sub</th>
     <th>Pub</th>
     <th>List</th>
     <th>Invoke</th>
     <th>Get</th>
     <th>Set</th></tr>
-<tr><td>00</td>
-    <td>status</td>
+<tr><td rowspan="2">00</td>
+    <td>Status</td>
+    <td>1</td>
+    <td>response</td>
     <td>O</td>
     <td>O</td>
     <td>O</td>
     <td>O</td>
     <td>O</td>
+    <td>O</td></tr>
+    <tr><td colspan="9">
+      <a href="https://github.com/dsa-2/docs/wiki/Status-Table">List of status codes</a>
+    </td></tr>
+<tr><td rowspan="2">01</td>
+    <td>Page ID</td>
+    <td>1</td>
+    <td>both</td>
+    <td>- | O</td>
+    <td>O | -</td>
+    <td>- | -</td>
+    <td>O | O</td>
+    <td>- | O</td>
+    <td>O | -</td></tr>
+    <tr><td colspan="9">
+      Included when a payload is too big to be delivered in a single message.
+    </td></tr>
+<tr><td rowspan="2">08</td>
+    <td>Alias Count</td>
+    <td>1</td>
+    <td>request</td>
     <td>O</td>
     <td>O</td>
-</tr>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td></tr>
+    <tr><td colspan="9">
+      To detect circular references in aliases, this value is incremented every time the request is routed via an alias. If the count exceeds a configured maximum, an aliasLoop error is returned to the requestor. The maximum is configured on a per-broker basis.
+    </td></tr>
+<tr><td rowspan="2">10</td>
+    <td>Qos</td>
+    <td>1</td>
+    <td>request</td>
+    <td>O</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td></tr>
+    <tr><td colspan="9">
+      Qos of s subscription, see <a href="https://github.com/dsa-2/docs/wiki/Qos">Qos</a>
+    </td></tr>
+<tr><td rowspan="2">11</td>
+    <td>Update Frequency</td>
+    <td>1</td>
+    <td>request</td>
+    <td>O</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td></tr>
+    <tr><td colspan="9">
+      Update frequency of a subscription, see <a href="https://github.com/dsa-2/docs/wiki/Qos">Qos</a>
+    </td></tr>
 
+<tr><td rowspan="2">18</td>
+    <td>Priority</td>
+    <td>1</td>
+    <td>both</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td></tr>
+    <tr><td colspan="9">
+      When the value is 01~7F, the request/response will have a lower priority than normal message, when value is 81~FF, the message will have a higher priority than normal message.
+    </td></tr>
+<tr><td rowspan="2">60</td>
+    <td>Permission Token</td>
+    <td>Str</td>
+    <td>request</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td></tr>
+    <tr><td colspan="9">
+      permission token, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a>(0x60 and 0x62 can not be used together in a request)
+    </td></tr>
+<tr><td rowspan="2">62</td>
+    <td>Max Permission</td>
+    <td>1</td>
+    <td>request</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td></tr>
+    <tr><td colspan="9">
+      Max permission, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a>(0x60 and 0x62 can not be used together in a request)
+    </td></tr>
+<tr><td rowspan="2">80</td>
+    <td>Target Path</td>
+    <td>Str</td>
+    <td>request</td>
+    <td>O</td>
+    <td>-</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td></tr>
+    <tr><td colspan="9">
+      Path of a request
+    </td></tr>
+<tr><td rowspan="2">81</td>
+    <td>Source Path</td>
+    <td>Str</td>
+    <td>request</td>
+    <td>-</td>
+    <td>O</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td></tr>
+    <tr><td colspan="9">
+      Path of a publish method
+    </td></tr>
 </table>
-
-* 0x00 **status**, 1 byte ([List of status codes)](https://github.com/dsa-2/docs/wiki/Status-Table)
-* 0x01 **page ID**, 4 bytes: Included when a payload is too big to be delivered in a single message.
-* 0x08 **alias count**, 1 byte: To detect circular references in aliases, this value is incremented every time the request is routed via an alias. If the count exceeds a configured maximum, an aliasLoop error is returned to the requestor. The maximum is configured on a per-broker basis.
-* 0x10 **qos**, 1 byte: See [Qos](https://github.com/dsa-2/docs/wiki/Qos)
-* 0x11 **update frequency**, 1 byte: max frequency of update, responder will merge value if more than one updates is received in a time interval.
-  * 0x00: no limitation (default value)
-  * 0x10: 100 ms
-  * 0x20: 1 second
-  * 0x30: 5 second   
-  * 0x40: 15 second
-  * 0x50: 30 second
-  * 0x60: 1 minute
-  * 0x70: 5 minute
-  * 0x80: 15 minute
-  * 0x90: 30 minute
-  * 0xA0: 1 hour
-* 0x18 **priority**: A bool value, TRUE if the message is a high-priority message, FALSE if normal priority.
-* 0x60 **permission token**: 2-byte string length + string data. (0x60 and 0x62 can not be used together in a request)
-* 0x62 **max permission**, 1 byte: The max permission that the current request is allowed to run. (0x60 and 0x62 can not be used together in a request)
-* 0x70 **path**: 2-byte string length + string data
