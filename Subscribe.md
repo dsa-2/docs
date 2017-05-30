@@ -7,7 +7,7 @@ request body is always empty
 * header body, [dsa key values pairs format](https://github.com/dsa-2/docs/wiki/Key-Value-Format)
 * value body (msgpack encoded)
 
-## Qos
+## Qos Headers
 
 ### Qos Levels
 Qos level is an optional header in a subscription request
