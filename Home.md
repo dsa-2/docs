@@ -1,5 +1,5 @@
 * [HandShake](https://github.com/dsa-2/docs/wiki/Handshake)
-* [Message](https://github.com/dsa-2/docs/wiki/Message)
+* Message
   * [Header Structure](https://github.com/dsa-2/docs/wiki/Header-Structure)
   * [HandShake Message](https://github.com/dsa-2/docs/wiki/Handshake-Message)
   * [Subscribe](https://github.com/dsa-2/docs/wiki/Subscribe)
