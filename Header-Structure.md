@@ -6,7 +6,7 @@ fixed header are used by all dsa2 message
 * Header length: 2 bytes
 * Method: 1 bytes
   * 01 / 81, subscribe ( request:01, response:81 )
-  * 02 / 82, publish
+  * 02 , publish
   * 03 / 83, list
   * 04 / 84, invoke
   * 05 / 85, Get
@@ -55,7 +55,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>1</td>
     <td>both</td>
     <td>-|O</td>
-    <td>O|-</td>
+    <td>-|-</td>
     <td>-|-</td>
     <td>O|O</td>
     <td>-|O</td>
@@ -172,7 +172,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Str</td>
     <td>request</td>
     <td>A</td>
-    <td>-</td>
+    <td>A</td>
     <td>A</td>
     <td>A</td>
     <td>A</td>
