@@ -38,6 +38,8 @@ Message Type Id : **F3**
 
 #### possible errors
 
+in http mode, the error will be output as json data with a 401 Unauthorized error
+
 | Code | Message|
 |:-------------:| ------------- |
 | 20| Permission denied|
