@@ -1,4 +1,4 @@
-The status codes in the range from 00 to 0F correspond to the codes from 80 to FF. The 00-0F range is used for conditions that permit the stream to remain open, while 80-ff means the stream must be closed. 
+The status codes in the range from 00 to 0F correspond to the codes from 80 to FF. The 00-0F range is used for conditions that permit the stream to remain open, while 80-FF means the stream must be closed. 
 
 
 | Code(hex) | Message  | Remarks |
