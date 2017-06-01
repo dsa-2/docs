@@ -32,7 +32,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <th>Len</th>
     <th>Type</th>
     <th>Sub</th>
-    <th>Pub</th>
+    <th>Observe</th>
     <th>List</th>
     <th>Invoke</th>
     <th>Get</th>
