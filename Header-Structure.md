@@ -6,7 +6,7 @@ The fixed header is used by all dsa2 messages.
 * Header length: 2 bytes
 * Method: 1 bytes
   * 01 / 81, subscribe ( request:01, response:81 )
-  * 02 / 81 83, publish
+  * 02 / 81 83, observe
   * 03 / 83, list
   * 04 / 84, invoke
   * 05 / 85, Get
@@ -194,7 +194,7 @@ The dynamic part of the header can contain the following data, formatted as key/
       Path of a request
     </td></tr>
 <tr><td rowspan="2">81</td>
-    <td>Publish Path</td>
+    <td>Source Path</td>
     <td>Str</td>
     <td>response</td>
     <td>A</td>
@@ -204,6 +204,6 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="9">
-      list and subscribe response that comes for a publish request will always have a source path.
+      list and subscribe response that comes for a observe request will always have a source path.
     </td></tr>
 </table>
