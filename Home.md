@@ -3,7 +3,7 @@
   * [Header Structure](https://github.com/dsa-2/docs/wiki/Header-Structure)
   * [HandShake Message](https://github.com/dsa-2/docs/wiki/Handshake-Message)
   * [Subscribe](https://github.com/dsa-2/docs/wiki/Subscribe)
-  * [Publish](https://github.com/dsa-2/docs/wiki/Method-Publish)
+  * [Observe](https://github.com/dsa-2/docs/wiki/Method-Observe)
   * [List](https://github.com/dsa-2/docs/wiki/Method-List)
   * [Invoke](https://github.com/dsa-2/docs/wiki/Method-Invoke)
   * [Get](https://github.com/dsa-2/docs/wiki/Method-Get)
