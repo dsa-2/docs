@@ -1,7 +1,7 @@
 In DSA 2.0, messages are composed of a header and a body (payload). Message headers contain a fixed structure followed by a variable structure, as follows.
 
 ## Fixed structure
-fixed header are used by all dsa2 message
+The fixed header is used by all dsa2 messages.
 * Total length of message: 4 bytes
 * Header length: 2 bytes
 * Method: 1 bytes
