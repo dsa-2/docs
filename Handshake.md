@@ -27,9 +27,8 @@ client need to send these information to the broker to initialize a handshake
 * time: current time, can not have more than 5 minutes difference from the server. 
    * client need to maintain the difference between server time and client time just incase one of them has wrong time setting, or it can just load the
 * token : a token to set up the client's initial permission (Optional)
-   * if token is not specified, it will be treated as blank string "" in the auth
 * auth: a based64 encoded string to verify the identity of the client
-   * auth = SHA256 (UTF8Bytes (StringConcat(token+"\n"+time)) + SharedSecret ) ("+" here means concatenating of byte buffer)
+   * auth = SHA256 (time) + SharedSecret ) ("+" here means concatenating of byte buffer)
 * isRequester, indicate whether client want to be a requester (Optional, default true)
 * isResponder, indicate whether client want to be a responder(Optional, default true)
 
