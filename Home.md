@@ -6,8 +6,7 @@
   * [Observe](https://github.com/dsa-2/docs/wiki/Method-Observe)
   * [List](https://github.com/dsa-2/docs/wiki/Method-List)
   * [Invoke](https://github.com/dsa-2/docs/wiki/Method-Invoke)
-  * [Get](https://github.com/dsa-2/docs/wiki/Method-Get)
-  * [Set](https://github.com/dsa-2/docs/wiki/Set)
+  * [Set](https://github.com/dsa-2/docs/wiki/Method-Set)
 
 * Security
   * [Authentication](https://github.com/dsa-2/docs/wiki/Authentication)
