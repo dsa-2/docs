@@ -1,4 +1,7 @@
-* [HandShake](https://github.com/dsa-2/docs/wiki/Handshake)
+* Security
+  * [HandShake](https://github.com/dsa-2/docs/wiki/Handshake)
+  * [Authorization](https://github.com/dsa-2/docs/wiki/Authorization)
+
 * Message
   * [Header Structure](https://github.com/dsa-2/docs/wiki/Header-Structure)
   * [HandShake Message](https://github.com/dsa-2/docs/wiki/Handshake-Message)
@@ -8,8 +11,6 @@
   * [Invoke](https://github.com/dsa-2/docs/wiki/Method-Invoke)
   * [Set](https://github.com/dsa-2/docs/wiki/Method-Set)
 
-* Security
-  * [Authentication](https://github.com/dsa-2/docs/wiki/Authentication)
-  * [Authorization](https://github.com/dsa-2/docs/wiki/Authorization)
+
 
 
