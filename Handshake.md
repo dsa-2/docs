@@ -48,6 +48,3 @@ this is the first response broker send to requester
 * path : client's path on the broker (if client is responder)
 
 
-
-## Token Validation
-
