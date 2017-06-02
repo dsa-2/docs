@@ -15,8 +15,8 @@ in a http/websocket server, this is usually hosted on /conn end point of the ser
 
 client need to send these information to the broker to initialize a handshake
 
-in websocket/http handshake, these information should be sent in query string
-in tcp handshake, these information should be sent as first request message
+* in websocket/http handshake, these information should be sent in query string
+* in tcp handshake, these information should be sent as first request message
 
 #### ECDH handshake
 
