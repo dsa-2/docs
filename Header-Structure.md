@@ -89,7 +89,21 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="9">
       When the value is 01~7F, the request/response will have a lower priority than normal message, when value is 81~FF, the message will have a higher priority than normal message.
     </td></tr>
-<tr><td rowspan="2">10</td>
+<tr><td rowspan="2">11</td>
+    <td>No Stream</td>
+    <td>0</td>
+    <td>request</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td>
+    <td>O</td></tr>
+    <tr><td colspan="9">
+      when this flag is in the header, the stream will be closed as soon as data is ready, without requester sending any close request.<br>
+      the only valid response status  < 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10
+    </td></tr>
+<tr><td rowspan="2">12</td>
     <td>Qos</td>
     <td>1</td>
     <td>request</td>
@@ -102,7 +116,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="9">
       Qos of s subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
-<tr><td rowspan="2">11</td>
+<tr><td rowspan="2">13</td>
     <td>Update Frequency</td>
     <td>1</td>
     <td>request</td>
@@ -115,7 +129,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="9">
       Update frequency of a subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
-<tr><td rowspan="2">12</td>
+<tr><td rowspan="2">14</td>
     <td>Queue Size</td>
     <td>1</td>
     <td>request</td>
@@ -128,7 +142,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="9">
       Prefered Queue size of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
-<tr><td rowspan="2">13</td>
+<tr><td rowspan="2">15</td>
     <td>Queue Time</td>
     <td>1</td>
     <td>request</td>
