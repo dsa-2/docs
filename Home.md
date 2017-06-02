@@ -1,16 +1,19 @@
 * Security
-  * [HandShake](https://github.com/dsa-2/docs/wiki/Handshake)
-  * [Authorization](https://github.com/dsa-2/docs/wiki/Authorization)
+  * [HandShake](Handshake)
+  * [Authorization](Authorization)
 
 * Message
-  * [Header Structure](https://github.com/dsa-2/docs/wiki/Header-Structure)
-  * [HandShake Message](https://github.com/dsa-2/docs/wiki/Handshake-Message)
-  * [Subscribe](https://github.com/dsa-2/docs/wiki/Subscribe)
-  * [Observe](https://github.com/dsa-2/docs/wiki/Method-Observe)
-  * [List](https://github.com/dsa-2/docs/wiki/Method-List)
-  * [Invoke](https://github.com/dsa-2/docs/wiki/Method-Invoke)
-  * [Set](https://github.com/dsa-2/docs/wiki/Method-Set)
+  * [Header Structure](Header-Structure)
+  * [HandShake Message](Handshake-Message)
+  * [Subscribe](Subscribe)
+  * [Observe](Method-Observe)
+  * [List](Method-List)
+  * [Invoke](Method-Invoke)
+  * [Set](Method-Set)
 
+* Broker 
+  * [Broker Module](Broker-Module)
+  * [Native Dslink](Native-Dslink)
 
 
 
