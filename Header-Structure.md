@@ -48,7 +48,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td></tr>
     <tr><td colspan="9">
-      <a href="https://github.com/dsa-2/docs/wiki/Status-Table">List of status codes</a>
+      <a href="Status-Table">List of status codes</a>
     </td></tr>
 <tr><td rowspan="2">01</td>
     <td>Page ID</td>
@@ -101,7 +101,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td></tr>
     <tr><td colspan="9">
       when this flag is in the header, the stream will be closed as soon as data is ready, without requester sending any close request.<br>
-      the only valid response status  < 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10
+      the only valid response status  < 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10 <a href="Status-Table">List of status codes</a>
     </td></tr>
 <tr><td rowspan="2">12</td>
     <td>Qos</td>
