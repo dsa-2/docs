@@ -35,7 +35,6 @@ The dynamic part of the header can contain the following data, formatted as key/
     <th>Observe</th>
     <th>List</th>
     <th>Invoke</th>
-    <th>Get</th>
     <th>Set</th></tr>
 <tr><td rowspan="2">00</td>
     <td>Status</td>
@@ -45,9 +44,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td>
     <td>O</td>
-    <td>O</td>
     <td>O</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       <a href="Status-Table">List of status codes</a>
     </td></tr>
 <tr><td rowspan="2">01</td>
@@ -58,9 +56,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-|-</td>
     <td>-|-</td>
     <td>O|O</td>
-    <td>-|O</td>
     <td>O|-</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       Included when a payload is too big to be delivered in a single message.
     </td></tr>
 <tr><td rowspan="2">08</td>
@@ -71,9 +68,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td>
     <td>O</td>
-    <td>O</td>
     <td>O</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       To detect circular references in aliases, this value is incremented every time the request is routed via an alias. If the count exceeds a configured maximum, an aliasLoop error is returned to the requestor. The maximum is configured on a per-broker basis.
     </td></tr>
 <tr><td rowspan="2">10</td>
@@ -84,9 +80,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td>
     <td>O</td>
-    <td>O</td>
     <td>O</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       When the value is 01~7F, the request/response will have a lower priority than normal message, when value is 81~FF, the message will have a higher priority than normal message.
     </td></tr>
 <tr><td rowspan="2">11</td>
@@ -97,9 +92,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td>
     <td>O</td>
-    <td>O</td>
     <td>O</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       when this flag is in the header, the stream will be closed as soon as data is ready, without requester sending any close request.<br>
       the only valid response status  < 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10 <a href="Status-Table">List of status codes</a>
     </td></tr>
@@ -111,9 +105,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>-</td>
     <td>-</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       Qos of s subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">13</td>
@@ -124,9 +117,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>-</td>
     <td>-</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       Update frequency of a subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">14</td>
@@ -137,9 +129,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>-</td>
     <td>-</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       Prefered Queue size of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">15</td>
@@ -150,9 +141,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>-</td>
     <td>-</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       Prefered Queue time of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">21</td>
@@ -163,9 +153,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>O</td>
     <td>-</td>
-    <td>-</td>
     <td>-</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       base path of a list response, only needed in the first response of a request, unless response is refreshed, see <a href="https://github.com/dsa-2/docs/wiki/Method-List">List</a>
     </td></tr>
 <tr><td rowspan="2">60</td>
@@ -176,9 +165,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td>
     <td>O</td>
-    <td>O</td>
     <td>O</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       permission token, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a> (0x60 and 0x62 can not be used together in a request)
     </td></tr>
 <tr><td rowspan="2">62</td>
@@ -189,9 +177,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td>
     <td>O</td>
-    <td>O</td>
     <td>O</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       Max permission, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a> (0x60 and 0x62 can not be used together in a request)
     </td></tr>
 <tr><td rowspan="2">80</td>
@@ -202,9 +189,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>A</td>
     <td>A</td>
     <td>A</td>
-    <td>A</td>
     <td>A</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       Path of a request
     </td></tr>
 <tr><td rowspan="2">81</td>
@@ -215,9 +201,8 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>A</td>
     <td>-</td>
-    <td>-</td>
     <td>-</td></tr>
-    <tr><td colspan="9">
+    <tr><td colspan="8">
       list and subscribe response that comes for a observe request will always have a source path.
     </td></tr>
 </table>
