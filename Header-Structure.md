@@ -156,6 +156,18 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="8">
       base path of a list response, only needed in the first response of a request, unless response is refreshed, see <a href="https://github.com/dsa-2/docs/wiki/Method-List">List</a>
     </td></tr>
+<tr><td rowspan="2">30</td>
+    <td>Skippable</td>
+    <td>0</td>
+    <td>response</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>O</td>
+    <td>-</td></tr>
+    <tr><td colspan="8">
+      when a invoke response contains a skippable flag. the broker can choose to skip this message if the next message comes in before the previous one is sent out to requester.
+    </td></tr>
 <tr><td rowspan="2">60</td>
     <td>Permission Token</td>
     <td>Str</td>
