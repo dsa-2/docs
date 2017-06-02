@@ -94,7 +94,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td></tr>
     <tr><td colspan="8">
       when this flag is in the header, the stream will be closed as soon as data is ready, without requester sending any close request.<br>
-      the only valid response status  < 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10 <a href="Status-Table">List of status codes</a>
+      the only valid response status  &lt; 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10 <a href="Status-Table">List of status codes</a>
     </td></tr>
 <tr><td rowspan="2">12</td>
     <td>Qos</td>
