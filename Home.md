@@ -12,7 +12,7 @@
   * [Set](Method-Set)
 
 * Broker 
-  * [Broker Module](Broker-Module)
+  * [Broker Component](Broker-Component)
 
 
 
