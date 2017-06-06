@@ -1,1 +1,0 @@
-Broker Module is a plugable component to replace some native feature of the broker, like authentication, authorization, storage
