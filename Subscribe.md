@@ -34,7 +34,7 @@ When broker accepts a queue size from the requester ( smaller than max size ) , 
 ### Queue Time
 Queue time is an optional header in a subscription request. defines how long a value can stay in a queue. it works similar to the queue size, when queue time is accepted by a broker, the broker should forward that information to responder.
 
-### Update frequency
+### Update frequency ?
 Update frequency is an optional header in a subscription request. when set,  responder will merge value if more than one updates is received in a time interval.
 
 value of the update frequency is one byte index:
