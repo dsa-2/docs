@@ -28,7 +28,7 @@ example of table format
   "columns": [
     {"name": "changes", "type": "string"}
   ],
-  "updates": [
+  "rows": [
     ["first update"]
   ]
 }
