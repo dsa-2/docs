@@ -178,7 +178,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td></tr>
     <tr><td colspan="8">
-      permission token, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a> (0x60 and 0x62 can not be used together in a request)
+      permission token, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a> 
     </td></tr>
 <tr><td rowspan="2">62</td>
     <td>Max Permission</td>
@@ -190,7 +190,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td></tr>
     <tr><td colspan="8">
-      Max permission, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a> (0x60 and 0x62 can not be used together in a request)
+      Max permission, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a>
     </td></tr>
 <tr><td rowspan="2">80</td>
     <td>Target Path</td>
