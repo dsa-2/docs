@@ -184,11 +184,11 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Max Permission</td>
     <td>1</td>
     <td>request</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
     <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td></tr>
+    <td>-</td></tr>
     <tr><td colspan="8">
       Max permission, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a>
     </td></tr>
