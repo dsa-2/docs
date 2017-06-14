@@ -8,7 +8,7 @@ in websocket mode, the dsId also need to be sent in url query string
 * version : 2 bytes
    * current version 2.0 0x0200
 * secure : 1 bytes (0x00 : plain connection, 0x01 secure connection)
-   * secure connection is not needed for a websocket connection based on https
+   * secure connection is not needed for a websocket connection over https
 * salt : 32 bytes
 
 ## Broker Info (always non-secure)
