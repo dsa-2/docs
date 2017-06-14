@@ -1,5 +1,4 @@
 * Security
-  * [HandShake](Handshake)
   * [Authorization](Authorization)
 
 * Message
