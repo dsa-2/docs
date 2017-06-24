@@ -1,5 +1,5 @@
 
-[An Example of Handshake algorithm implemnted in nodejs](handshake-algorithm.node.js)
+[An Example of Handshake algorithm implemented in nodejs](handshake-algorithm.node.js)
 
 ## Client Info (always non-secure)
 Message Type Id : **F0**

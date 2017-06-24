@@ -1,8 +1,8 @@
 * Security
-  * [Authorization](Authorization.md)
+  * [Authorization](protocol/Authorization.md)
 
 * Message
-  * [Header Structure](methods/Header-Structure.md)
+  * [Header Structure](protocol/Header-Structure.md)
   * [HandShake Message](handshake/Handshake-Message.md)
   * [Subscribe](methods/Subscribe.md)
   * [Observe](methods/Method-Observe.md)
