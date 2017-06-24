@@ -12,7 +12,7 @@ The fixed header is used by all dsa2 messages.
   * 05 / 85, Set
   * F0 / F1 / F2 / F3, handshake
 * Request ID (reqId): 4 bytes
-* Sequence ID (seqId): 4 bytes
+
 
 The sequence ID is use to assemble multi-part messages. Sequence numbering starts from 0.
 
@@ -47,6 +47,18 @@ The dynamic part of the header can contain the following data, formatted as key/
       <a href="Status-Table">List of status codes</a>
     </td></tr>
 <tr><td rowspan="2">01</td>
+    <td>SequenceID</td>
+    <td>1</td>
+    <td>both</td>
+    <td>-|O</td>
+    <td>-|-</td>
+    <td>-|-</td>
+    <td>O|O</td>
+    <td>-|-</td></tr>
+    <tr><td colspan="8">
+      Included when a payload is too big to be delivered in a single message.
+    </td></tr>
+<tr><td rowspan="2">02</td>
     <td>Page ID</td>
     <td>1</td>
     <td>both</td>
