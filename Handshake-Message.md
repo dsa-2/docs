@@ -3,10 +3,10 @@ Message Type Id : **F0**
 
 in websocket mode, the dsId also need to be sent in url query string
 
-* dsId : broker dsId, [string data](DSA-Binary-Encoding#string-encoding)
-* publicKey, broker public key, binary ECPoint data in in X9.63 format, fixed length, 65 bytes
 * version : 2 bytes
    * current version 2.0 0x0200
+* dsId : broker dsId, [string data](DSA-Binary-Encoding#string-encoding)
+* publicKey, broker public key, binary ECPoint data in in X9.63 format, fixed length, 65 bytes
 * secure : 1 bytes (0x00 : plain connection, 0x01 secure connection)
    * secure connection is not needed for a websocket connection over https
 * salt : 32 bytes
