@@ -8,7 +8,7 @@ in websocket mode, the dsId also need to be sent in url query string
 * dsId : broker dsId, [string data](DSA-Binary-Encoding#string-encoding)
 * publicKey, broker public key, binary ECPoint data in in X9.63 format, fixed length, 65 bytes
 * encryption: 1 bytes (0x00 : plain connection, 0x01 aes256-ctr)
-   * secure connection is not needed for a websocket connection over https
+   * encryption is not needed for a secure tcp or wss
 * salt : 32 bytes
 
 ## Broker Info (always non-secure)
