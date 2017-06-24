@@ -8,7 +8,7 @@ request body is always empty
 
 Message Type Id : **83**
 
-* [dsa key values pairs format](https://github.com/dsa-2/docs/wiki/DSA-Binary-Encoding#key-value-pairs-encoding)
+* [dsa key values pairs format](../common/DSA-Binary-Encoding.md#key-value-pairs-encoding)
 
   * attributes: 
      * key starts with @

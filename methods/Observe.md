@@ -3,7 +3,7 @@ when server send a observe request to the client, it requires client to send bac
 ### limitations
 
 * since client need to send all update to broker, observe request won't work on devices that have too many data updates
-* [Pagging](Paggint) is not supported, so observe response can not have huge value that can't be handled by one single message
+* [Pagging](../protocol/Pagging.md) is not supported, so observe response can not have huge value that can't be handled by one single message
 
 ## request body structure
 Message Type Id : **02**

@@ -44,7 +44,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td></tr>
     <tr><td colspan="8">
-      <a href="Status-Table">List of status codes</a>
+      <a href="Status-Table.md">List of status codes</a>
     </td></tr>
 <tr><td rowspan="2">01</td>
     <td>SequenceID</td>
@@ -105,7 +105,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td></tr>
     <tr><td colspan="8">
       when this flag is in the header, the stream will be closed as soon as data is ready, without requester sending any close request.<br>
-      the only valid response status  &lt; 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10 <a href="Status-Table">List of status codes</a>
+      the only valid response status  &lt; 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10 <a href="Status-Table.md">List of status codes</a>
     </td></tr>
 <tr><td rowspan="2">12</td>
     <td>Qos</td>
@@ -117,7 +117,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
-      Qos of s subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
+      Qos of s subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">13</td>
     <td>Update Frequency</td>
@@ -129,7 +129,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
-      Update frequency of a subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
+      Update frequency of a subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">14</td>
     <td>Queue Size</td>
@@ -141,7 +141,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
-      Prefered Queue size of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
+      Prefered Queue size of subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">15</td>
     <td>Queue Time</td>
@@ -153,7 +153,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
-      Prefered Queue time of subscription, see <a href="https://github.com/dsa-2/docs/wiki/Subscribe">Subscribe</a>
+      Prefered Queue time of subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">21</td>
     <td>Base Path</td>
@@ -165,7 +165,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
-      base path of a list response, only needed in the first response of a request, unless response is refreshed, see <a href="https://github.com/dsa-2/docs/wiki/Method-List">List</a>
+      base path of a list response, only needed in the first response of a request, unless response is refreshed, see <a href="../methods/List.md">List</a>
     </td></tr>
 <tr><td rowspan="2">30</td>
     <td>Skippable</td>
@@ -189,7 +189,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>-</td></tr>
     <tr><td colspan="8">
-      Max permission, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a>
+      Max permission, see <a href="../protocol/Authorization.md">Authorization</a>
     </td></tr>
 <tr><td rowspan="2">60</td>
     <td>Permission Token</td>
@@ -201,7 +201,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>O</td>
     <td>O</td></tr>
     <tr><td colspan="8">
-      permission token, see <a href="https://github.com/dsa-2/docs/wiki/Authorization">Authorization</a> 
+      permission token, see <a href="../protocol/Authorization.md">Authorization</a> 
     </td></tr>
 
 <tr><td rowspan="2">80</td>
