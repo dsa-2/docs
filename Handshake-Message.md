@@ -35,7 +35,7 @@ In secure mode, this will be the first message that's encrypted in aes
   * for an empty token, use an empty string, which is just one byte of 0
 * isRequester: 1 byte bool value, 0x00 for false, 0x01 for true
 * isResponder: 1 byte bool value, 0x00 for false, 0x01 for true
-* reconnect: reconnect from a previous connection, 1 byte bool value, 0x00 for false, 0x01 for true
+* reconnect: reconnect from a previous connection, 1 byte bool value
   * if reconnect is true, isRequester and isResponder must be same as previous connection
 * auth: binay of sha256 data, fixed 32 bytes
   * auth = sha256(serverSalt + SharedSecret)
