@@ -40,7 +40,7 @@ var clientSalt = new Buffer('c4ca4238a0b923820dcc509a6f75849bc81e728d9d4c2f636f0
 var f0 = Buffer.concat([
 	new Buffer([0,0,0,0]), // place holder for total length
 	new Buffer([11,0]), // header length: 11
-	new Buffer([0xf0]), // handshake message f0
+	new Buffer([0xf0]), // handshake message type f0
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
 
 	new Buffer([2, 0]), // dsa version: 2.0
@@ -68,7 +68,7 @@ var brokerSalt = new Buffer('eccbc87e4b5ce2fe28308fd9f2a7baf3a87ff679a2f3e71d918
 var f1 = Buffer.concat([
 	new Buffer([0,0,0,0]), // place holder for total length
 	new Buffer([11,0]), // header length: 11
-	new Buffer([0xf1]), // handshake message f1
+	new Buffer([0xf1]), // handshake message type f1
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
 
 	new Buffer([brokerDsId.length]), // length of client dsId, assume the length < 128
@@ -96,7 +96,7 @@ var clientAuth = crypto.createHmac('sha256', clientSharedSecret).update(brokerSa
 var f2 = Buffer.concat([
 	new Buffer([0,0,0,0]), // place holder for total length
 	new Buffer([11,0]), // header length: 11
-	new Buffer([0xf2]), // handshake message f2
+	new Buffer([0xf2]), // handshake message type f2
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
 
 	new Buffer([clientToken.length]), // length of client token, (when token length >127, this needs 2 bytes)
@@ -128,7 +128,7 @@ var clientPath = '/downstream/mlink1';
 var f3 = Buffer.concat([
 	new Buffer([0,0,0,0]), // place holder for total length
 	new Buffer([11,0]), // header length: 11
-	new Buffer([0xf3]), // handshake message f3
+	new Buffer([0xf3]), // handshake message type f3
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
 
 	new Buffer([0]), // not reconnected
