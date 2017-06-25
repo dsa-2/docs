@@ -103,7 +103,7 @@ var f2 = Buffer.concat([
 	new Buffer(clientToken, 'utf8'), // token content
 	new Buffer([1]), // isRequester: true
 	new Buffer([1]), // isResponder: true
-	new Buffer([0]), // reconnect: false
+	new Buffer([0]), // blank session string
 	clientAuth
 	]);
 f2.writeUInt32LE(f2.length, 0); // total length
@@ -124,6 +124,8 @@ var brokerSharedSecret = brokerECDH.computeSecret(clientPublic);
 var brokerAuth = crypto.createHmac('sha256', brokerSharedSecret).update(clientSalt).digest();
 
 var clientPath = '/downstream/mlink1';
+var clientSessionId = 'sampe-session-001';
+
 
 var f3 = Buffer.concat([
 	new Buffer([0,0,0,0]), // place holder for total length
@@ -131,7 +133,9 @@ var f3 = Buffer.concat([
 	new Buffer([0xf3]), // handshake message type f3
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
 
-	new Buffer([0]), // not reconnected
+	new Buffer([clientSessionId.length]), // length of client session string, (when path length >127, this needs 2 bytes)
+	new Buffer(clientSessionId, 'utf8'), // session string content
+
 	new Buffer([clientPath.length]), // length of client path, (when path length >127, this needs 2 bytes)
 	new Buffer(clientPath, 'utf8'), // path content
 	brokerAuth
@@ -141,7 +145,7 @@ f3.writeUInt32LE(f3.length, 0); // total length
 console.log('\n handshake message f3, broker -> client:');
 console.log(f3.toString('hex'))
 /*
-3f0000000b00f30000000000122f646f776e73747265616d2f6d6c696e6b315831534d1e0271d8155ae4b29c452d1711a90476895d75947eb63e722da41d14
+500000000b00f3000000001173616d70652d73657373696f6e2d303031122f646f776e73747265616d2f6d6c696e6b315831534d1e0271d8155ae4b29c452d1711a90476895d75947eb63e722da41d14
 */
 
 

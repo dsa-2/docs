@@ -38,8 +38,9 @@ In secure mode, this will be the first message that's encrypted in aes
   * for an empty token, use an empty string, which is just one byte of 0
 * isRequester: 1 byte bool value, 0x00 for false, 0x01 for true
 * isResponder: 1 byte bool value, 0x00 for false, 0x01 for true
-* reconnect: reconnect from a previous connection, 1 byte bool value
-  * if reconnect is true, isRequester and isResponder must be same as previous connection
+* session: previous session string returned by broker, or blank string 
+  * if reconnect is not blank, isRequester and isResponder must be same as previous session
+  * when previous session is accepted, streams that's not closed can be reused
 * auth: binay of sha256 data, fixed 32 bytes
   * auth = HMAC_SHA256(SharedSecret).digest(broker salt)
 
@@ -47,7 +48,9 @@ In secure mode, this will be the first message that's encrypted in aes
 ## Handshake response body structure
 Message Type Id : **F3**
 
-* reconnected: 1 byte bool value, 0x00 for false, 0x01 for true
+* session: session string
+  * if previous session string sent by client is accepted, the same session will be returned
+  * if the previous session is blank or already expired, a new session string will be sent back
 * path : where the client will be on the broker, [string data](../common/DSA-Binary-Encoding#string-encoding.md#string-encoding).
    * if client is not responder, this should just be an empty string
 * auth: binay of sha256 data, fixed 32 bytes
