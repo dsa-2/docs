@@ -41,7 +41,7 @@ In secure mode, this will be the first message that's encrypted in aes
 * reconnect: reconnect from a previous connection, 1 byte bool value
   * if reconnect is true, isRequester and isResponder must be same as previous connection
 * auth: binay of sha256 data, fixed 32 bytes
-  * auth = sha256(serverSalt + SharedSecret)
+  * auth = HMAC_SHA256(SharedSecret).digest(broker salt)
 
 
 ## Handshake response body structure
@@ -51,8 +51,8 @@ Message Type Id : **F3**
 * path : where the client will be on the broker, [string data](../common/DSA-Binary-Encoding#string-encoding.md#string-encoding).
    * if client is not responder, this should just be an empty string
 * auth: binay of sha256 data, fixed 32 bytes
-  * auth = sha256(client Salt + SharedSecret)
-
+  * auth = HMAC_SHA256(SharedSecret).digest(client salt)
+  
 or broker could return blank data with one of the following error
 
 | Error| Message|
