@@ -14,8 +14,6 @@ The fixed header is used by all dsa2 messages.
 * Request ID (reqId): 4 bytes
 
 
-The sequence ID is use to assemble multi-part messages. Sequence numbering starts from 0.
-
 ## Dynamic structure
 
 The dynamic part of the header can contain the following data, formatted as key/value pairs. The key is 1 byte long.
