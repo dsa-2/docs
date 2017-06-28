@@ -42,7 +42,7 @@ var f0 = Buffer.concat([
 	new Buffer([11,0]), // header length: 11
 	new Buffer([0xf0]), // handshake message type f0
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
-
+            // end of header
 	new Buffer([2, 0]), // dsa version: 2.0
 	new Buffer([clientDsId.length]), // length of client dsId, assume the length < 128
 	new Buffer(clientDsId, 'utf8'), // dsId content
@@ -70,7 +70,7 @@ var f1 = Buffer.concat([
 	new Buffer([11,0]), // header length: 11
 	new Buffer([0xf1]), // handshake message type f1
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
-
+            // end of header
 	new Buffer([brokerDsId.length]), // length of client dsId, assume the length < 128
 	new Buffer(brokerDsId, 'utf8'), // dsId content
 	brokerPublic, // 65 bytes
@@ -98,7 +98,7 @@ var f2 = Buffer.concat([
 	new Buffer([11,0]), // header length: 11
 	new Buffer([0xf2]), // handshake message type f2
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
-
+            // end of header
 	new Buffer([clientToken.length]), // length of client token, (when token length >127, this needs 2 bytes)
 	new Buffer(clientToken, 'utf8'), // token content
 	new Buffer([1]), // isRequester: true
@@ -132,7 +132,7 @@ var f3 = Buffer.concat([
 	new Buffer([11,0]), // header length: 11
 	new Buffer([0xf3]), // handshake message type f3
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
-
+            // end of header
 	new Buffer([clientSessionId.length]), // length of client session string, (when path length >127, this needs 2 bytes)
 	new Buffer(clientSessionId, 'utf8'), // session string content
 
