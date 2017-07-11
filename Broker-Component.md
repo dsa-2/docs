@@ -2,7 +2,7 @@
 
 ### Serialization 
 
-store client information, data nodes values, users, etc.
+Stores client information, data nodes values, users, etc.
 
 ```
 class Data {
@@ -17,42 +17,28 @@ readAll(); // figure out what to do with saved data when broker starts
 
 ### Authorization
 
-seen [Authorization](Authorization)
+See [Authorization](Authorization)
 
 ## Packages
 
-### network handler (TCP, HTTP)
+### Network handler (TCP, HTTP)
 
-raw network api -> binary data
+Raw network api -> binary data
 
-handshake
+Handshake
 
+###  Responder API handler
 
+Maintain subscription, streams and queue. Accept requests from multiple streams.
 
+### Responder Model handler
 
-###  reqponder API handler
+Maintain node hierachy, attributes and configs.
 
-maintain subscription and streams/queue
+### Requester API handler
 
-accept requests from multiple streams
+Handle a single request. 
 
+### Requester Model structure
 
-### responder Model handler
-
-maintain node hierachy and attribtues/ configs
-
-
-
-
-
-
-### requester API handler
-
-maintain single request 
-
-
-### requester Model structure
-
-be used as request api parameters and results
-
-a placeholder to maintain collection of the api handler
+Used for request API parameters and results and as a placeholder to maintain the collection of the API handler.
