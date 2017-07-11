@@ -15,7 +15,7 @@ Message type ID:  **81**
 ## Qos Headers
 
 ### Qos Levels
-Qos level is an optional header in a subscription request, specifying the quality of service (qos) that the requester requires.
+(Optional) Specifies the quality of service (qos) that the requester requires.
 
 * 0 (default): Most recent value
 * 1: All values, if possible
