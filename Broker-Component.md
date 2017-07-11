@@ -14,7 +14,6 @@ class Data {
 readAll(); // figure out what to do with saved data when broker starts
 ```
 
-
 ### Authorization
 
 See [Authorization](Authorization)
@@ -23,9 +22,11 @@ See [Authorization](Authorization)
 
 ### Network handler (TCP, HTTP)
 
+QUESTION: What does the following mean?
+
 Raw network api -> binary data
 
-Handshake
+Handshake 
 
 ###  Responder API handler
 
