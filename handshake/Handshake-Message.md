@@ -2,7 +2,7 @@
 [An Example of Handshake algorithm implemented in nodejs](handshake-algorithm.node.js)
 
 ## Client Info (always non-secure)
-Message Type Id : **F0**
+Message type ID: **F0**
 
 In websocket mode, the dsId must also be sent in the URL query string.
 
@@ -13,7 +13,7 @@ In websocket mode, the dsId must also be sent in the URL query string.
 * salt: 32 bytes
 
 ## Broker Info (always non-secure)
-Message Type Id : **F1**
+Message type ID: **F1**
 
 * dsId: broker dsId, [string data](DSA-Binary-Encoding#string-encoding)
 * publicKey: The broker public key, binary ECPoint data in in X9.63 format, fixed length of 65 bytes
@@ -28,7 +28,7 @@ The broker returns blank data if one of the following errors occurs:
 
 
 ## Handshake request body structure 
-Message Type Id : **F2**
+Message type ID: **F2**
 
 In secure mode, this is the first message that is encrypted in aes
 
@@ -40,7 +40,7 @@ In secure mode, this is the first message that is encrypted in aes
 
 
 ## Handshake response body structure
-Message Type Id : **F3**
+Message type ID: **F3**
 
 * reconnected: 1-byte bool value, 0x00 for false, 0x01 for true
 * path: Location of the client on the broker, if the client is a responder: [string data](DSA-Binary-Encoding#string-encoding). If the client is not a responder, path must be an empty string.
