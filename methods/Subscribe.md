@@ -1,10 +1,10 @@
-## request body structure
+## Request body structure
 
 Message type ID:  **01**
 
 The request body is always empty.
 
-## response body structure
+## Response body structure
 
 Message type ID:  **81**
 
