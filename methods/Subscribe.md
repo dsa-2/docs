@@ -1,12 +1,12 @@
 ## request body structure
 
-Message Type Id : **01**
+Message type ID:  **01**
 
-request body is always empty
+The request body is always empty.
 
 ## response body structure
 
-Message Type Id : **81**
+Message type ID:  **81**
 
 * header length, 4 bytes
 * header body, [dsa key values pairs format](../common/DSA-Binary-Encoding.md#key-value-pairs-encoding)
@@ -15,38 +15,30 @@ Message Type Id : **81**
 ## Qos Headers
 
 ### Qos Levels
-Qos level is an optional header in a subscription request
+Qos level is an optional header in a subscription request, specifying the quality of service (qos) that the requester requires.
 
-* 0 : requester only cares about last value (default value)
-* 1 : requester need all values if possible
-* 2 : requester need all values even if connection is dropped ( durable )
-* 3 : requester need all values even if responder is rebooted ( persistent )
+* 0 (default): Most recent value
+* 1: All values, if possible
+* 2: All values, even if the connection is dropped (durable)
+* 3: All values, even if the responder is rebooted (persistent)
 
 ### Queue Size
-Queue size is an optional header in a subscription request.  Each responder have a max and default qos queue size set up for each requester.
-
-If the queue size in the request is smaller than the max size, responder should use the queue size in the request. 
-
-If the queue size in the request is bigger than the max size, responder should ignore it, (not treated as error)  
-
-When broker accepts a queue size from the requester ( smaller than max size ) , it should forward that information to responder.
+(Optional) Specifies the size of the qos queue maintained for the requester. Every responder maintains a maximum and a default qos queue size for each requester. If the queue size in a request is smaller than the maximum size, the responder uses the queue size specified in the request. If the queue size in the request exceeds the maximum, the responder ignores it and does not return an error. When a broker accepts a queue size that is smaller than the maximum from the requester, it must forward that information to the responder.
 
 ### Queue Time
-Queue time is an optional header in a subscription request. defines how long a value can stay in a queue. it works similar to the queue size, when queue time is accepted by a broker, the broker should forward that information to responder.
+(Optional) Specifies how long a value can stay in a queue. When a broker accepts a queue time that is smaller than the maximum from the requester, it must forward that information to the responder. QUESTIONS: specified in milliseconds? What's the default? What's the maximum?
 
-### Update frequency ?
-Update frequency is an optional header in a subscription request. when set,  responder will merge value if more than one updates is received in a time interval.
-
-value of the update frequency is one byte index:
+### Update Frequency 
+(Optional) If set, the responder merges value if more than one updatesis received in the specified time interval. To specify the interval, use the following 1-byte values: QUESTION: What does it mean to "merge" values?
 
   * 0x00: no limitation (default value)
-  * 0x10: 100 ms
+  * 0x10: 100 milliseconds
   * 0x20: 1 second
-  * 0x30: 5 second   
-  * 0x40: 15 second
-  * 0x50: 30 second
+  * 0x30: 5 seconds   
+  * 0x40: 15 seconds
+  * 0x50: 30 seconds
   * 0x60: 1 minute
-  * 0x70: 5 minute
-  * 0x80: 15 minute
-  * 0x90: 30 minute
+  * 0x70: 5 minutes
+  * 0x80: 15 minutes
+  * 0x90: 30 minutes
   * 0xA0: 1 hour
