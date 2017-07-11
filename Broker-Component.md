@@ -1,6 +1,6 @@
 ## Modules
 
-### Serialization 
+### Storage 
 
 Stores client information, data nodes values, users, etc.
 
