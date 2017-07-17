@@ -12,6 +12,9 @@ The fixed header is used by all dsa2 messages.
   * 05 / 85, Set
   * F0 / F1 / F2 / F3, handshake
 * Request ID (reqId): 4 bytes
+  * 0 means no need for an id
+* Acknowledgment ID (ackId): 4 bytes
+  * 0 means no need to ack
 
 
 ## Dynamic structure
