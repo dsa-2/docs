@@ -29,7 +29,7 @@ Message type ID:  **81**
 (Optional) Specifies how long a value can stay in a queue. When a broker accepts a queue time that is smaller than the maximum from the requester, it must forward that information to the responder. QUESTIONS: specified in milliseconds? What's the default? What's the maximum?
 
 ### Update Frequency 
-(Optional) If set, the responder merges value if more than one updatesis received in the specified time interval. To specify the interval, use the following 1-byte values: QUESTION: What does it mean to "merge" values?
+(Optional) If set, the responder returns the most recent value received in the specified time interval. To specify the interval, use the following 1-byte values: 
 
   * 0x00: no limitation (default value)
   * 0x10: 100 milliseconds
