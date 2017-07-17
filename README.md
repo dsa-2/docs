@@ -5,10 +5,10 @@
   * [Header Structure](protocol/Header-Structure.md)
   * [HandShake Message](handshake/Handshake-Message.md)
   * [Subscribe](methods/Subscribe.md)
-  * [Observe](methods/Method-Observe.md)
-  * [List](methods/Method-List.md)
-  * [Invoke](methods/Method-Invoke.md)
-  * [Set](methods/Method-Set.md)
+  * [Observe](methods/Observe.md)
+  * [List](methods/List.md)
+  * [Invoke](methods/Invoke.md)
+  * [Set](methods/Set.md)
 
 * Broker 
   * [Broker Component](Broker-Component.md)
