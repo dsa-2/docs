@@ -132,7 +132,7 @@ var clientSessionId = 'sampe-session-001';
 
 var f3 = Buffer.concat([
 	new Buffer([0,0,0,0]), // place holder for total length
-	new Buffer([15,0]), // header length: 11
+	new Buffer([15,0]), // header length: 15
 	new Buffer([0xf3]), // handshake message type f3
 	new Buffer([0,0,0,0]), // request Id, 0 for all handshake message
 	new Buffer([0,0,0,0]), // ack Id, 0 for all handshake message
