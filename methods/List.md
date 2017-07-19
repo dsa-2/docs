@@ -1,12 +1,12 @@
 ## request body structure
 
-Message Type Id : **03**
+Message Type Id : **02**
 
 request body is always empty
 
 ## response body structure
 
-Message Type Id : **83**
+Message Type Id : **82**
 
 * [dsa key values pairs format](../common/DSA-Binary-Encoding.md#key-value-pairs-encoding)
 
