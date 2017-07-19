@@ -9,7 +9,7 @@ The fixed header is used by all dsa2 messages.
   * 02 / 82, list
   * 03 / 83, invoke
   * 04 / 84, Set
-  * 05 / 81 82, observe
+  * 0F / 81 82, observe
   * F0 / F1 / F2 / F3, handshake
 * Request ID (reqId): 4 bytes
   * 0 means no need for an id
