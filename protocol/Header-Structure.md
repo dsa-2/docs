@@ -6,10 +6,10 @@ The fixed header is used by all dsa2 messages.
 * Header length: 2 bytes
 * Method: 1 bytes
   * 01 / 81, subscribe ( request:01, response:81 )
-  * 02 / 81 83, observe
-  * 03 / 83, list
-  * 04 / 84, invoke
-  * 05 / 85, Set
+  * 02 / 82, list
+  * 03 / 83, invoke
+  * 04 / 84, Set
+  * 05 / 81 82, observe
   * F0 / F1 / F2 / F3, handshake
 * Request ID (reqId): 4 bytes
   * 0 means no need for an id
