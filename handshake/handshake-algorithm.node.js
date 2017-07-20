@@ -112,7 +112,7 @@ var f2 = Buffer.concat([
 	new Buffer(clientToken, 'utf8'), // token content
 	new Buffer([1]), // isRequester: true
 	new Buffer([1]), // isResponder: true
-	new Buffer([0]), // blank session string
+	new Buffer([0,0]), // blank session string
 	clientAuth
 	]);
 f2.writeUInt32LE(f2.length, 0); // total length
@@ -120,7 +120,7 @@ f2.writeUInt32LE(f2.length, 0); // total length
 console.log('\n handshake message f2, client -> broker:');
 console.log(f2.toString('hex'))
 /*
-470000000f00f20000000000000000130073616d706c655f746f6b656e5f737472696e67010100f58c10e212a82bf327a020679c424fc63e852633a53253119df74114fac8b2ba
+480000000f00f20000000000000000130073616d706c655f746f6b656e5f737472696e6701010000f58c10e212a82bf327a020679c424fc63e852633a53253119df74114fac8b2ba
 */
 
 
