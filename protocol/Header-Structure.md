@@ -45,7 +45,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     </td></tr>
 <tr><td rowspan="2">01</td>
     <td>SequenceID</td>
-    <td>1</td>
+    <td>4</td>
     <td>both</td>
     <td>response<br/>only</td>
     <td>-</td>
@@ -57,7 +57,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     </td></tr>
 <tr><td rowspan="2">02</td>
     <td>Page ID</td>
-    <td>1</td>
+    <td>4</td>
     <td>both</td>
     <td>response<br/>only</td>
     <td>-</td>
