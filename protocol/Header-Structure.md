@@ -63,7 +63,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td>
     <td>✓</td>
-    <td>✓</td></tr>
+    <td>request<br/>only</td></tr>
     <tr><td colspan="8">
       Included when a payload is too big to be delivered in a single message.
     </td></tr>
