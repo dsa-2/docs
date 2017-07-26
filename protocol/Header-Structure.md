@@ -130,7 +130,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     </td></tr>
 <tr><td rowspan="2">14</td>
     <td>Queue Size</td>
-    <td>1</td>
+    <td>4</td>
     <td>request</td>
     <td>✓</td>
     <td>-</td>
@@ -142,7 +142,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     </td></tr>
 <tr><td rowspan="2">15</td>
     <td>Queue Time</td>
-    <td>1</td>
+    <td>4</td>
     <td>request</td>
     <td>✓</td>
     <td>-</td>
