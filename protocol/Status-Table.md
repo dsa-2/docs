@@ -10,7 +10,7 @@ The status codes in the range from 00 to 0F correspond to the codes from 80 to F
 | 10 | Closed | Closed normally, with no error  |
 | 1E| Disconnected | Stream must be closed, usually for invoke response |
 | 20| Permission denied|
-| 21| Invalid input| Protocol level|
+| 21| Invalid message| Protocol level|
 | 22| Invalid parameter| Action level |
 | 28| Busy| Client cannot accept additional requests|
 | 41 | Alias loop| The number of aliased routings for this request has exceeded the maximum allowed. 
