@@ -116,18 +116,6 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="8">
       Qos of s subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
-<tr><td rowspan="2">13</td>
-    <td>Update Frequency</td>
-    <td>1</td>
-    <td>request</td>
-    <td>✓</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td></tr>
-    <tr><td colspan="8">
-      Update frequency of a subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
-    </td></tr>
 <tr><td rowspan="2">14</td>
     <td>Queue Size</td>
     <td>4</td>
