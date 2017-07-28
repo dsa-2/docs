@@ -28,6 +28,7 @@ Message type ID:  **81**
 ### Queue Time
 (Optional) Specifies how long (in seconds) a value can stay in a queue. When a broker accepts a queue time that is smaller than the maximum from the requester, it must forward that information to the responder.
 
+<!--
 ### Update Frequency 
 (Optional) If set, the responder returns the most recent value received in the specified time interval. To specify the interval, use the following 1-byte values: 
 
@@ -42,3 +43,4 @@ Message type ID:  **81**
   * 0x80: 15 minutes
   * 0x90: 30 minutes
   * 0xA0: 1 hour
+-->
