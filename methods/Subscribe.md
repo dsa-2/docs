@@ -8,8 +8,8 @@ The request body is always empty.
 
 Message type ID:  **81**
 
-* metadata length, 4 bytes
-* metadata body, [dsa key values pairs format](../common/DSA-Binary-Encoding.md#key-value-pairs-encoding)
+* metadata length,2 bytes
+* metadata body, a msgpack map
 * value body (msgpack encoded)
 
 ## Qos Headers
