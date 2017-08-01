@@ -9,7 +9,7 @@ in dsa header and other broker aware data structure, string > 32767 bytes are no
 
 ## Key Value Pairs Encoding
 
-neither key or value can be bigger than 32767 bytes
+neither key nor value can be bigger than 32767 bytes
 
 * key length, 2 bytes LE
 * key data
