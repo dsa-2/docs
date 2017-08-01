@@ -9,13 +9,11 @@ in dsa header and other broker aware data structure, string > 32767 bytes are no
 
 ## Key Value Pairs Encoding
 
-one key value pair can't be more than 32676 bytes, which is the key + data size.
+neither key or value can be bigger than 32767 bytes
 
-this limitation only applies to list method response and value header in subscription response
-
-* total length, 2 bytes LE
 * key length, 2 bytes LE
 * key data
+* total value, 2 bytes LE
 * value data (msgpack encoding)
 
 
