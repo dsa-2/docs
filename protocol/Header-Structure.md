@@ -81,7 +81,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     </td></tr>
 <tr><td rowspan="2">10</td>
     <td>Priority</td>
-    <td>1</td>
+    <td>0</td>
     <td>both</td>
     <td>✓</td>
     <td>✓</td>
@@ -89,7 +89,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>✓</td>
     <td>✓</td></tr>
     <tr><td colspan="8">
-      When the value is 01~7F, the request/response will have a lower priority than normal message, when value is 81~FF, the message will have a higher priority than normal message.
+      when this flag is in the header, the stream will have higher priority
     </td></tr>
 <tr><td rowspan="2">11</td>
     <td>No Stream</td>
