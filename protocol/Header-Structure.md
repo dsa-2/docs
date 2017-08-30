@@ -82,7 +82,7 @@ The dynamic part of the header can contain the following data, formatted as key/
 <tr><td rowspan="2">10</td>
     <td>Priority</td>
     <td>0</td>
-    <td>both</td>
+    <td>request</td>
     <td>✓</td>
     <td>✓</td>
     <td>✓</td>
