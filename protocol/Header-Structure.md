@@ -50,7 +50,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>response<br/>only</td>
     <td>-</td>
     <td>-</td>
-    <td>✓</td>
+    <td>both</td>
     <td>-</td></tr>
     <tr><td colspan="8">
       Included when a payload is too big to be delivered in a single message.
@@ -62,7 +62,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>response<br/>only</td>
     <td>-</td>
     <td>-</td>
-    <td>✓</td>
+    <td>both</td>
     <td>request<br/>only</td></tr>
     <tr><td colspan="8">
       Included when a payload is too big to be delivered in a single message.
