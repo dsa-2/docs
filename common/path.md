@@ -1,4 +1,5 @@
-## a dsa v2 path is a string of node names separated by `/`
+## path
+a dsa node path is a string of node names separated by `/`
 
 ## invalid characters in path name
 
