@@ -176,6 +176,18 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="8">
       Max permission, see <a href="../protocol/Authorization.md">Authorization</a>
     </td></tr>
+<tr><td rowspan="2">41</td>
+    <td>Attribute Field</td>
+    <td>Str</td>
+    <td>request</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>✓</td></tr>
+    <tr><td colspan="8">
+      Attribute field of a set request.
+    </td></tr>
 <tr><td rowspan="2">60</td>
     <td>Permission Token</td>
     <td>Str</td>
