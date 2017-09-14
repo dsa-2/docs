@@ -32,18 +32,20 @@ Message type ID: **F2**
 
 In secure mode, this is the first message that is encrypted in aes
 
-* token: [string data](../common/DSA-Binary-Encoding.md#string-encoding). For an empty token, use an empty string, a single byte containing 0.
-* isRequester: 1-byte bool value, 0x00 for false, 0x01 for true
+* clientToken: [string data](../common/DSA-Binary-Encoding.md#string-encoding). For an empty token, use an empty string, a single byte containing 0.
 * isResponder: 1-byte bool value, 0x00 for false, 0x01 for true
-* reconnect: 1-byte bool value, true (0x01) if reconnecting from a previous connection. If reconnect is true, isRequester and isResponder must be same as the previous connection
+* lastSessionId： [string data](../common/DSA-Binary-Encoding.md#string-encoding). A session id previously set by server. Use blank string when first connect
+* lastAckId: 4 bytes, the last sent ack by client in previous session, valid only when lastSessionId is not blank
 * auth: binary of sha256 data, fixed 32 bytes. auth = sha256(serverSalt + SharedSecret)
 
 
 ## Handshake response body structure
 Message type ID: **F3**
 
-* reconnected: 1-byte bool value, 0x00 for false, 0x01 for true
-* path: Location of the client on the broker, if the client is a responder: [string data](../common/DSA-Binary-Encoding.md#string-encoding). If the client is not a responder, path must be an empty string.
+* allowRequester: 1-byte bool value, allow client to send request or not
+* sessionId： [string data](../common/DSA-Binary-Encoding.md#string-encoding). New session assigned to client, or lastSessionId sent by client if the client is still valid
+* lastAckId: 4 bytes, the last sent ack by server in previous session, valid only when lastSessionId accepted
+* path: Location of the client on the broker, if the client is a responder: [string data](../common/DSA-Binary-Encoding.md#string-encoding). And when client is not a responder, path must be an empty string.
 * auth: binary of sha256 data, fixed 32 bytes. auth = sha256(client Salt + SharedSecret)
 
 
