@@ -8,8 +8,8 @@ The request body is always empty.
 
 Message type ID:  **81**
 
-* header length, 4 bytes
-* header body, [dsa key values pairs format](../common/DSA-Binary-Encoding.md#key-value-pairs-encoding)
+* metadata length,2 bytes
+* metadata body, a msgpack map
 * value body (msgpack encoded)
 
 ## Qos Headers
@@ -23,13 +23,14 @@ Message type ID:  **81**
 * 3: All values, even if the responder is rebooted (persistent)
 
 ### Queue Size
-(Optional) Specifies the size of the qos queue maintained for the requester. Every responder maintains a maximum and a default qos queue size for each requester. If the queue size in a request is smaller than the maximum size, the responder uses the queue size specified in the request. If the queue size in the request exceeds the maximum, the responder ignores it and does not return an error. When a broker accepts a queue size that is smaller than the maximum from the requester, it must forward that information to the responder.
+(Optional) Specifies the size (in bytes) of the qos queue maintained for the requester. Every responder maintains a maximum and a default qos queue size for each requester. If the queue size in a request is smaller than the maximum size, the responder uses the queue size specified in the request. If the queue size in the request exceeds the maximum, the responder ignores it and does not return an error. When a broker accepts a queue size that is smaller than the maximum from the requester, it must forward that information to the responder.
 
 ### Queue Time
-(Optional) Specifies how long a value can stay in a queue. When a broker accepts a queue time that is smaller than the maximum from the requester, it must forward that information to the responder. QUESTIONS: specified in milliseconds? What's the default? What's the maximum?
+(Optional) Specifies how long (in seconds) a value can stay in a queue. When a broker accepts a queue time that is smaller than the maximum from the requester, it must forward that information to the responder.
 
+<!--
 ### Update Frequency 
-(Optional) If set, the responder merges value if more than one updatesis received in the specified time interval. To specify the interval, use the following 1-byte values: QUESTION: What does it mean to "merge" values?
+(Optional) If set, the responder returns the most recent value received in the specified time interval. To specify the interval, use the following 1-byte values: 
 
   * 0x00: no limitation (default value)
   * 0x10: 100 milliseconds
@@ -42,3 +43,4 @@ Message type ID:  **81**
   * 0x80: 15 minutes
   * 0x90: 30 minutes
   * 0xA0: 1 hour
+-->

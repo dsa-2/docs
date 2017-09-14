@@ -1,12 +1,12 @@
 ## request body structure
 
-Message Type Id : **04**
+Message Type Id : **03**
 
 * parameters : a msgpack encoded map for all the parameters
 
 ## response body structure
 
-Message Type Id : **81**
+Message Type Id : **83**
 
 * body : a msgpack encoded object for all result, can be any data type or structure. but table is a structure that's mostly used
   * table format: root object is a map, with the following child keys

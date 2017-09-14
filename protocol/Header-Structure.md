@@ -6,21 +6,20 @@ The fixed header is used by all dsa2 messages.
 * Header length: 2 bytes
 * Method: 1 bytes
   * 01 / 81, subscribe ( request:01, response:81 )
-  * 02 / 81 83, observe
-  * 03 / 83, list
-  * 04 / 84, invoke
-  * 05 / 85, Set
+  * 02 / 82, list
+  * 03 / 83, invoke
+  * 04 / 84, Set
+  * 0F / 81 82, observe
   * F0 / F1 / F2 / F3, handshake
 * Request ID (reqId): 4 bytes
+  * 0 means no need for an id
+* Acknowledgment ID (ackId): 4 bytes
+  * 0 means no need to ack
 
 
 ## Dynamic structure
 
 The dynamic part of the header can contain the following data, formatted as key/value pairs. The key is 1 byte long.
-
-* O : optional
-* A : always
-* \- : not used
 
 <table>
 <tr><th>Code</th>
@@ -36,35 +35,35 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Status</td>
     <td>1</td>
     <td>response</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td></tr>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td></tr>
     <tr><td colspan="8">
       <a href="Status-Table.md">List of status codes</a>
     </td></tr>
 <tr><td rowspan="2">01</td>
     <td>SequenceID</td>
-    <td>1</td>
+    <td>4</td>
     <td>both</td>
-    <td>-|O</td>
-    <td>-|-</td>
-    <td>-|-</td>
-    <td>O|O</td>
-    <td>-|-</td></tr>
+    <td>response<br/>only</td>
+    <td>-</td>
+    <td>-</td>
+    <td>both</td>
+    <td>-</td></tr>
     <tr><td colspan="8">
       Included when a payload is too big to be delivered in a single message.
     </td></tr>
 <tr><td rowspan="2">02</td>
     <td>Page ID</td>
-    <td>1</td>
+    <td>4</td>
     <td>both</td>
-    <td>-|O</td>
-    <td>-|-</td>
-    <td>-|-</td>
-    <td>O|O</td>
-    <td>O|-</td></tr>
+    <td>response<br/>only</td>
+    <td>-</td>
+    <td>-</td>
+    <td>both</td>
+    <td>request<br/>only</td></tr>
     <tr><td colspan="8">
       Included when a payload is too big to be delivered in a single message.
     </td></tr>
@@ -72,35 +71,35 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Alias Count</td>
     <td>1</td>
     <td>request</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td></tr>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td></tr>
     <tr><td colspan="8">
       To detect circular references in aliases, this value is incremented every time the request is routed via an alias. If the count exceeds a configured maximum, an aliasLoop error is returned to the requestor. The maximum is configured on a per-broker basis.
     </td></tr>
 <tr><td rowspan="2">10</td>
     <td>Priority</td>
-    <td>1</td>
-    <td>both</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td></tr>
+    <td>0</td>
+    <td>request</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td></tr>
     <tr><td colspan="8">
-      When the value is 01~7F, the request/response will have a lower priority than normal message, when value is 81~FF, the message will have a higher priority than normal message.
+      when this flag is in the header, the stream will have higher priority
     </td></tr>
 <tr><td rowspan="2">11</td>
     <td>No Stream</td>
     <td>0</td>
     <td>request</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td></tr>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td></tr>
     <tr><td colspan="8">
       when this flag is in the header, the stream will be closed as soon as data is ready, without requester sending any close request.<br>
       the only valid response status  &lt; 0x10  is 0x01 (Initializing) , other status should all become a close status 0x10 <a href="Status-Table.md">List of status codes</a>
@@ -109,7 +108,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Qos</td>
     <td>1</td>
     <td>request</td>
-    <td>O</td>
+    <td>✓</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -117,23 +116,11 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="8">
       Qos of s subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
-<tr><td rowspan="2">13</td>
-    <td>Update Frequency</td>
-    <td>1</td>
-    <td>request</td>
-    <td>O</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td></tr>
-    <tr><td colspan="8">
-      Update frequency of a subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
-    </td></tr>
 <tr><td rowspan="2">14</td>
     <td>Queue Size</td>
-    <td>1</td>
+    <td>4</td>
     <td>request</td>
-    <td>O</td>
+    <td>✓</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -143,9 +130,9 @@ The dynamic part of the header can contain the following data, formatted as key/
     </td></tr>
 <tr><td rowspan="2">15</td>
     <td>Queue Time</td>
-    <td>1</td>
+    <td>4</td>
     <td>request</td>
-    <td>O</td>
+    <td>✓</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -159,7 +146,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>response</td>
     <td>-</td>
     <td>-</td>
-    <td>O</td>
+    <td>✓</td>
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
@@ -172,7 +159,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>O</td>
+    <td>✓</td>
     <td>-</td></tr>
     <tr><td colspan="8">
       when a invoke response contains a skippable flag. the broker can choose to skip this message if the next message comes in before the previous one is sent out to requester.
@@ -184,20 +171,32 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>O</td>
+    <td>✓</td>
     <td>-</td></tr>
     <tr><td colspan="8">
       Max permission, see <a href="../protocol/Authorization.md">Authorization</a>
+    </td></tr>
+<tr><td rowspan="2">41</td>
+    <td>Attribute Field</td>
+    <td>Str</td>
+    <td>request</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>✓</td></tr>
+    <tr><td colspan="8">
+      Attribute field of a set request.
     </td></tr>
 <tr><td rowspan="2">60</td>
     <td>Permission Token</td>
     <td>Str</td>
     <td>request</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td>
-    <td>O</td></tr>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td></tr>
     <tr><td colspan="8">
       permission token, see <a href="../protocol/Authorization.md">Authorization</a> 
     </td></tr>
@@ -206,11 +205,11 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Target Path</td>
     <td>Str</td>
     <td>request</td>
-    <td>A</td>
-    <td>A</td>
-    <td>A</td>
-    <td>A</td>
-    <td>A</td></tr>
+    <td>Always</td>
+    <td>Always</td>
+    <td>Always</td>
+    <td>Always</td>
+    <td>Always</td></tr>
     <tr><td colspan="8">
       Path of a request
     </td></tr>
@@ -218,9 +217,9 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Source Path</td>
     <td>Str</td>
     <td>response</td>
-    <td>A</td>
+    <td>Always</td>
     <td>-</td>
-    <td>A</td>
+    <td>Always</td>
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
