@@ -2,7 +2,9 @@
 
 Message Type Id : **04**
 
-* value: a msgpack encoded object for the value to be set
+* metadata length,2 bytes
+* metadata body, a msgpack map
+* value body (msgpack encoded)
 
 ## response body structure
 
