@@ -53,7 +53,6 @@ var f0 = Buffer.concat([
 	makeUint16Buffer(clientDsId.length), // length of client dsId
 	new Buffer(clientDsId, 'utf8'), // dsId content
 	clientPublic, // 65bytes
-	new Buffer([0]), // no encryption
 	clientSalt // 32 bytes
 	]);
 f0.writeUInt32LE(f0.length, 0); // total length
@@ -61,8 +60,7 @@ f0.writeUInt32LE(f0.length, 0); // total length
 console.log('\n handshake message f0, client -> broker:');
 console.log(f0.toString('hex'));
 /* 
-a70000000f00f00000000000000000020032006d796c696e6b2d54544458744c2d555f4e5132736746525535773048725a56696232442d4f3443785851724b6b34685573490415caf59c92efecb9253ea43912b419941fdb59a23d5d1289027128bf3d6ee4cb86fbe251b675a8d9bd991a65caa1bb23f8a8e0dd4eb0974f6b1eaa3436cec0e900c4ca4238a0b923820dcc509a6f75849bc81e728d9d4c2f636f067f89cc14862c
-
+a60000000f00f00000000000000000020032006d796c696e6b2d54544458744c2d555f4e5132736746525535773048725a56696232442d4f3443785851724b6b34685573490415caf59c92efecb9253ea43912b419941fdb59a23d5d1289027128bf3d6ee4cb86fbe251b675a8d9bd991a65caa1bb23f8a8e0dd4eb0974f6b1eaa3436cec0e9c4ca4238a0b923820dcc509a6f75849bc81e728d9d4c2f636f067f89cc14862c
 */
 
 
