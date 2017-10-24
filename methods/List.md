@@ -8,31 +8,51 @@ request body is always empty
 
 Message Type Id : **82**
 
-* [dsa key values pairs format](../common/DSA-Binary-Encoding.md#key-value-pairs-encoding)
+[dsa key values pairs format](../common/DSA-Binary-Encoding.md#key-value-pairs-encoding)
 
-  * attributes: 
-     * key starts with @
-     * value is any msgpack encoded data (with size limitation)
-  * configs : 
-     * key starts with $
-     * value is any msgpack encoded data (with size limitation)
-  * children
-     * key starts with other character
-     * value is msgpack format of basic map node structure, including $is, $writable, $invokable information
+* attributes: 
+   * key starts with @
+   * value is any msgpack encoded data (with size limitation)
+* metas: 
+   * key starts with $
+   * value is any msgpack encoded data (with size limitation)
+* children
+   * key starts with other character
+   * value is msgpack format of basic map node structure, including $is, $type, $writable, $invokable information
 
-### base path header
+### response optional headers
 
-Base path is an optional header for a list response, when broker pass a list response from responder to requester, it should append the responder's node path to the base path, so the requester will be able to tell where is the root node of that responder
-
+* class
+  * Class header is the path to a node that contains the common action children and other nodes pre-defined for the same class
+  * when class path starts with `/` it's a path that either already known by the sdk or availible at every broker
+  * when class path doesn't start with `/`, it needs to be conbined with base path.
+* base path
+  * base path is only needed when class points to local path
+  * initial response only need to have blank string "" in base path, and each level of broker will append the relative path to the dslink when forward this response to requester.
 
 ### special configs
 
 * $is : the profile node position
-* $invokable : indicate whether the node is an action node that can be invoked, the value is the minimal permission level requester needs to invoke this action.
-* $type : indicate the [Value Type](Value-Types) of the current node. when this config exists, that means the current node has a value that requester can subscribe.
-
-
-* pamameters : the parameter structure of a action node
+  * this field is optional in dsa v2 (while in v1 $is and the class header are combined together)
+  * broker or sdk won't validate or check the value
+* $type : indicate the [Value Type](Value-Types) of the current node. 
+  * when this config exists, it means the current node has a value that requester can subscribe.
+* $invokable : indicate whether the node is an action node that can be invoked
+  * the value is the minimal permission level requester needs to invoke this action
+  * value can be  `list`, `read`, `write` or `config`
+* $writable : indicate whether the node's value can be modified
+  * the value is the minimal permission level requester needs to set the value
+  * value can be either `write` or `config`
+* $params : the parameter structure of a action node
+  * the structure must be a list of map objects
+  * each item in the list can have 
+     - name, name of the parameter (required)
+     - type, type of the parameter
+     - editor, use a special editor instead of the default one for the type
+     - default, default value of the parameter, which will be picked by the ui input element
+     - description, description of the parameter, will be shown in element tooltip (title)
+     - placeholder, placeholder when the editor is text input
+     - other option defined by the type
 
 
 
