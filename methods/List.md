@@ -13,7 +13,7 @@ Message Type Id : **82**
 * attributes: 
    * key starts with @
    * value is any msgpack encoded data (with size limitation)
-* metas: 
+* metadatas: 
    * key starts with $
      * when key starts with $$, only client with config permission can see
      * when key starts with $$$, no client can see it in list response
