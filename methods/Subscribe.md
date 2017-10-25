@@ -8,8 +8,8 @@ The request body is always empty.
 
 Message type ID:  **81**
 
-* metadata length,2 bytes
-* metadata body, a msgpack map
+* value metadata length,2 bytes
+* value metadata body, a msgpack map
 * value body (msgpack encoded)
 
 ## Qos Headers
