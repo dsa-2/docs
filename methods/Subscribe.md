@@ -23,10 +23,14 @@ Message type ID:  **81**
 * 3: All values, even if the responder is rebooted (persistent)
 
 ### Queue Size
-(Optional) Specifies the size (in bytes) of the qos queue maintained for the requester. Every responder maintains a maximum and a default qos queue size for each requester. If the queue size in a request is smaller than the maximum size, the responder uses the queue size specified in the request. If the queue size in the request exceeds the maximum, the responder ignores it and does not return an error. When a broker accepts a queue size that is smaller than the maximum from the requester, it must forward that information to the responder.
+(Optional) Specifies the size (in bytes) of the qos queue maintained for the requester. 
+* when total size in the queue is bigger than max queue size, all messages except the last one will be dropped no matter which qos level.
+* responder should have a max_queue_size and client can't request for a size bigger than responder allowed.
 
-### Queue Time
-(Optional) Specifies how long (in seconds) a value can stay in a queue. When a broker accepts a queue time that is smaller than the maximum from the requester, it must forward that information to the responder.
+### Queue Duration
+(Optional) Specifies how long (in seconds) a value can stay in a queue.
+* when a message stays in the queue for more than the queue time, it will be dropped, unless it's the last message.
+* responder should have a max_queue_time and client can't request for a duration bigger than responder allowed.
 
 <!--
 ### Update Frequency 
