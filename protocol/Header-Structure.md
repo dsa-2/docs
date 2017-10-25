@@ -3,19 +3,20 @@ In DSA 2.0, messages are composed of a header and a body (payload). Message head
 ## Fixed structure
 The fixed header is used by all dsa2 messages.
 * Total length of message: 4 bytes
+  * In current version, total length is limited to 65472 bytes, (65536-64)
 * Header length: 2 bytes
 * Method: 1 bytes
   * 01 / 81, subscribe ( request:01, response:81 )
   * 02 / 82, list
   * 03 / 83, invoke
-  * 04 / 84, Set
-  * 0F / 81 82, observe
+  * 04 / 84, set
+  * 0A / 81 82, observe
+  * 0F, close
   * F0 / F1 / F2 / F3, handshake
 * Request ID (reqId): 4 bytes
   * 0 means no need for an id
 * Acknowledgment ID (ackId): 4 bytes
   * 0 means no need to ack
-
 
 ## Dynamic structure
 
