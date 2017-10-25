@@ -10,10 +10,10 @@ Message Type Id : **82**
 
 [dsa key values pairs format](../common/DSA-Binary-Encoding.md#key-value-pairs-encoding)
 
-* attributes: 
+* node attributes: 
    * key starts with @
    * value is any msgpack encoded data (with size limitation)
-* metadatas: 
+* node metadatas: 
    * key starts with $
      * when key starts with $$, only client with config permission can see
      * when key starts with $$$, no client can see it in list response
