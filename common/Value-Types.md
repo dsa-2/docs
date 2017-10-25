@@ -11,6 +11,8 @@ Number can be either a integer or float number
     * Opens a date range editor.
   * date
     * Opens a date editor.
+    * Value is 2 ISO-8601 string joined by a `/`
+      * 2017-10-24T00:00:00.000+00:00/2017-10-24T23:59:59.999+00:00
   * textarea
     * Allows for multi-line input.
   * enum
@@ -23,7 +25,7 @@ Number can be either a integer or float number
 #### editors (optional)
 * bool enum, first option will be false and second will be true
   * special character in options should be url encoded
-  * example: editor=`bool[off, on]`
+  * example: editor=`bool[off,on]`
 
 ## binary
 Byte array
