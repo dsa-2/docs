@@ -4,7 +4,7 @@
 
 in dsa header, string > 32767 bytes are not supported. which means all paths, node names, attrubute/config names, permission tokens will be less than 32767 bytes.
 
-all string are UTF encoded, but broker is not required to validate the encoding. 
+all string are UTF-8 encoded, but broker is not required to validate the encoding. 
 
 * string length, 2 bytes LE
 * string data
