@@ -153,18 +153,6 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="8">
       base path of a list response, only needed in the first response of a request, unless response is refreshed, see <a href="../methods/List.md">List</a>
     </td></tr>
-<tr><td rowspan="2">22</td>
-    <td>Class</td>
-    <td>Str</td>
-    <td>response</td>
-    <td>-</td>
-    <td>-</td>
-    <td>✓</td>
-    <td>-</td>
-    <td>-</td></tr>
-    <tr><td colspan="8">
-      path to the class node, which defines common action nodes and other children shared by the same class, see <a href="../methods/List.md">List</a>
-    </td></tr>
 <tr><td rowspan="2">30</td>
     <td>Skippable</td>
     <td>0</td>
