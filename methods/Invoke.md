@@ -18,7 +18,7 @@ Message Type Id : **83**
         * modify : the modify mode of the stream, can be `replace N-M` or `insert N`
            * `replace 0-10` : remove data bwtween row 0-10 and replace with new rows in the updates
            * `insert 1` : insert before row 1, (first row is row 0)
-     * columns (optional) : a list of columns
+     * columns : a list of columns
      * rows : a list of list, for each cell in the table result
 
 example of table format
