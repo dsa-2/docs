@@ -24,19 +24,23 @@ Message Type Id : **82**
 
 ### response optional headers
 
-* class
+<!--* class
   * Class header is the path to a node that contains the common action children and other nodes pre-defined for the same class
   * when class path starts with `/` it's a path that either already known by the sdk or availible at every broker
-  * when class path doesn't start with `/`, it needs to be conbined with base path.
+  * when class path doesn't start with `/`, it needs to be conbined with base path.-->
 * base path
-  * base path is only needed when class points to local path
+  * base path is only needed when $is path points to local path
   * initial response only need to have blank string "" in base path, and each level of broker will append the relative path to the dslink when forward this response to requester.
 
 ### special metas
 
 * $is : the profile node position
+  * $is is the path to a node that contains the common action children and other nodes pre-defined for the same class
+  * when $is path starts with `/` it's a path that either already known by the sdk or availible at every broker
+  * when $is path doesn't start with `/`, it needs to be conbined with base path.
+<!--
   * this field is optional in dsa v2 (while in v1 $is and the class header are combined together)
-  * broker or sdk won't validate or check the value
+  * broker or sdk won't validate or check the value-->
 * $type : indicate the [Value Type](../common/Value-Types.md) of the current node. 
   * when this meta exists, it means the current node has a value that requester can subscribe.
 * $writable : indicate whether the node's value can be modified
