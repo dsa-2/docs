@@ -6,6 +6,10 @@ Message Type Id : **04**
 * value metadata body, a msgpack map
 * value body (msgpack encoded)
 
+#### Attribute Field Header
+
+when attribute field is specified, the set method change the node attribute instead of node value
+
 ## response body structure
 
 Message Type Id : **84**
