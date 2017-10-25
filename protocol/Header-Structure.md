@@ -129,7 +129,7 @@ The dynamic part of the header can contain the following data, formatted as key/
       Prefered Queue size of subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">15</td>
-    <td>Queue Time</td>
+    <td>Queue Duration</td>
     <td>4</td>
     <td>request</td>
     <td>✓</td>
@@ -138,7 +138,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
-      Prefered Queue time of subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
+      Prefered Queue Duration of subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
 <tr><td rowspan="2">21</td>
     <td>Base Path</td>
