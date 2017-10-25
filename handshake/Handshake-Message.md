@@ -6,7 +6,7 @@ Message type ID: **F0**
 
 In websocket mode, the dsId must also be sent in the URL query string.
 
-* version: 2 bytes. The current version is 2.0, encoded as 0x0200
+* version: 2 bytes. The current version is 2.0, encoded as 0x02, 0x00
 * dsId: broker dsId, [string data](../common/DSA-Binary-Encoding.md#string-encoding)
 * publicKey: The broker public key, binary ECPoint data in in X9.63 format, fixed length of 65 bytes
 * salt: 32 bytes
