@@ -26,3 +26,9 @@ log level
 * `error`
 * `fatal`
 * `none` : log nothing
+
+### -n / --name
+
+override dslink name
+
+this override the dslink's name and dsid prefix
