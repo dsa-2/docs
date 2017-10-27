@@ -9,5 +9,4 @@ a dsa node path is a string of node names separated by `/`
 * other rules
   * can't start with @ , reserved for node attribtue
   * can't start with $ , reserved for node metadata
-  * can't be single character `.`
-  * can't start with `..`
+  * can't be `.` or `..`
