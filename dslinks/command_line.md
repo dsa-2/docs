@@ -32,3 +32,7 @@ log level
 override dslink name
 
 this override the dslink's name and dsid prefix
+
+### -t / --thread
+
+number of threads (C++)
