@@ -4,6 +4,7 @@
 dslinks can all be started with command line arguments
 
 ### -b / --broker
+- default value `localhost`
 
 format:  `-b {protocol}://{host}:{port}`  or `-b {protocol}://{host}`
 
@@ -15,24 +16,26 @@ format:  `-b {protocol}://{host}:{port}`  or `-b {protocol}://{host}`
 * wss: secure websocket (port 443)
 
 ### -l / --log
+- default value `info`
 
 log level 
 
 * `all` : log everything
 * `trace`
 * `debug`
-* `info` : default log level
+* `info`
 * `warn`
 * `error`
 * `fatal`
 * `none` : log nothing
 
 ### -n / --name
+- default value is defined in code
 
 override dslink name
 
 this override the dslink's name and dsid prefix
 
 ### -t / --thread
-
-number of threads (C++)
+- default value `1`
+number of threads
