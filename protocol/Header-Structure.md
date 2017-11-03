@@ -141,6 +141,18 @@ The dynamic part of the header can contain the following data, formatted as key/
     <tr><td colspan="8">
       Prefered Queue Duration of subscription, see <a href="../methods/Subscribe.md">Subscribe</a>
     </td></tr>
+ <tr><td rowspan="2">20</td>
+    <td>Refreshed</td>
+    <td>0</td>
+    <td>both</td>
+    <td>-</td>
+    <td>-</td>
+    <td>response<br/>only</td>
+    <td>both</td>
+    <td>-</td></tr>
+    <tr><td colspan="8">
+     indicate that everything currently in the cache are no longer valid, need to clear all the cache and only use new update
+    </td></tr>
 <tr><td rowspan="2">21</td>
     <td>Base Path</td>
     <td>Str</td>
