@@ -16,11 +16,11 @@ The fixed header is used by all dsa2 messages.
   * F8, Ack
   * F9, Ping
 * Request ID (reqId): 4 bytes (optional)
-  * 0 means no need for an id
+  * 0 means no need for an id, only for message type >=0xF)
+    * in this case, it's ok to ommit the Request ID and Ack Id
 * Acknowledgment ID (ackId): 4 bytes (optional)
-  * 0 means no need to ack
 
-these message type don't need Request ID and Acknowledgement ID (any message type >= 0xF0)
+these message type don't need Request ID and Ack ID (any message type >= 0xF0)
 * F0 / F1 / F2 / F3, handshake
 * F8, Ack
 * F9, Ping
