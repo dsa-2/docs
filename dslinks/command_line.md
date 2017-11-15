@@ -1,5 +1,5 @@
 
-## command line arguments
+## general command line arguments
 
 dslinks can all be started with command line arguments
 
@@ -35,6 +35,8 @@ log level
 override dslink name
 
 this override the dslink's name and dsid prefix
+
+## arguments that only work in C++ sdk
 
 ### -t / --thread
 - default value `1`
