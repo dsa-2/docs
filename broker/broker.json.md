@@ -1,4 +1,3 @@
-
 #### dsa-version
 Read only
 
@@ -40,3 +39,11 @@ default value: 80,
 dsa https server port
 
 default value: 443
+
+
+#### config-path
+Optional
+
+the file system path point to the real broker config file.
+
+when this key exists in broker.json, all the other values are ignored
