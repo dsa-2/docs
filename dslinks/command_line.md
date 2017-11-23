@@ -36,8 +36,12 @@ override dslink name
 
 this override the dslink's name and dsid prefix
 
+### -t / --token
+
+a token for the connection handshake
+
 ## arguments that only work in C++ sdk
 
-### -t / --thread
+### --thread
 - default value `1`
 number of threads
