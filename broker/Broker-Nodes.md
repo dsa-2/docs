@@ -21,6 +21,9 @@ downstream dslinks/brokers
 ## upstream
 up stream brokers
 
+## quaratine
+protected area for quarantined dslinks
+
 ## pub
 
 a folder for public data
