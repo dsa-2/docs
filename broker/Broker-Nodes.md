@@ -4,6 +4,10 @@ folders for dslinks and users, may contain alias nodes to downstream/upstream or
 #### default
 default home folder for any user/dslink that doesn't have pre-defined home folder
 
+#### services
+a folder for all alias action from dslink, that can create device connections, storage, control logic. service action should always return the path of new node, and broker will automaticly alias it to the creator's home folder
+
+services folder is only availible to user/dslink with its own home folder, default home folder can only be modified when requester has global config permission
 
 ## ~
 an alias for the current user/dslink's home folder
