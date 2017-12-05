@@ -52,6 +52,7 @@ actions
  - Version (string, readonly)
  
  ### config (dslink-specific)
+ - Enabled (bool, read/write)
  - Log level (enum, read/write)
  - Name (string, read/write),
  - Server port (string, read/write)
