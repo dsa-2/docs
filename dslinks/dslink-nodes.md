@@ -20,10 +20,10 @@ icon data for this dslink
 ## sys
 system nodes, always require config permission
 
-### stop
+#### stop
 an action that stop the dslink, no parameter
 
-### restart
+#### restart
 an action that restart the dslink, no parameter 
 
 
