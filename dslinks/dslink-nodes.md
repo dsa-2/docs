@@ -21,9 +21,15 @@ icon data for this dslink
 system nodes, always require config permission
 
 #### stop
-an action that stop the dslink, no parameter
+an action that stop the dslink
+
+parameter
+* token: a hash of timestamp and private key
+
 
 #### restart
-an action that restart the dslink, no parameter 
+an action that restart the dslink
 
+parameter
+* token: a hash of timestamp and private key
 
