@@ -1,6 +1,7 @@
 
-- starts
+- lifecycle manager starts
 - open a port and listen as dsa server
+- read the broker.json
 - check broker and dslink folders and generate private keys for them when needed
 - start broker
 - start dslinks, and calculate their dsId from the private keys
