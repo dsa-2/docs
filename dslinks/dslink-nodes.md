@@ -26,10 +26,3 @@ an action that stop the dslink
 parameter
 * token: a hash of timestamp and private key
 
-
-#### restart
-an action that restart the dslink
-
-parameter
-* token: a hash of timestamp and private key
-
