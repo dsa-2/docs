@@ -26,6 +26,7 @@ log level
 * `info`
 * `warn`
 * `error`
+* `sys`
 * `fatal`
 * `none` : log nothing
 
