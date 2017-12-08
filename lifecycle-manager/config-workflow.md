@@ -22,7 +22,8 @@
     "log" : "debug",
     "server_port": 4223,
     "token" : null
-  },
+  }
+}
     
 - read lcm_dslink.json
 - scan folders matching with "dslink_folder_name_X"
