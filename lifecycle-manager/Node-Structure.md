@@ -60,4 +60,4 @@ actions
  - Token (string, read/write)
  
  ### common config
- - Broker url (string, read/write)
+ - Broker url (string, read/write) : directly configure in broker.json
