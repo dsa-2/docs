@@ -7,8 +7,7 @@
 - if its configuration is in another path, read there (config-path in broker.json)
 
 ## dslink
-lcm_dslink.json
----------------
+### lcm_dslink.json
 {
   "dslink_folder_name_1" : {
     "name" : "dslink_name_1",
