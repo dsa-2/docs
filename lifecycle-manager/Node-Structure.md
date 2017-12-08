@@ -11,6 +11,7 @@ actions
     - from url
     - from zip
     - from repository
+ - Restart Broker
 
 ## dslink nodes
 
