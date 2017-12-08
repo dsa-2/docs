@@ -8,6 +8,7 @@
 
 ## dslink
 ### lcm_dslink.json
+```
 {
   "dslink_folder_name_1" : {
     "name" : "dslink_name_1",
@@ -24,7 +25,7 @@
     "token" : null
   }
 }
-    
+``` 
 - read lcm_dslink.json
 - scan folders matching with "dslink_folder_name_X"
 
