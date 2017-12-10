@@ -3,6 +3,7 @@
 - open a port and listen as dsa server
 - start broker
 - read the broker.json
+- connect lifecycle-manager to broker
 - check broker and dslink folders and generate private keys for them when needed
 - start dslinks, and calculate their dsId from the private keys
 - listen on broker's /downstream, also listen on all children nodes of /downstream
