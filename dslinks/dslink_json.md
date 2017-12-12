@@ -50,7 +50,7 @@
     },
     "handler_class": {
       "type": "string",
-      "default": "modbus.Main"
+      "default": "x.Main"
     }
   }
 }
