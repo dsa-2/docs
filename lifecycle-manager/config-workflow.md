@@ -15,20 +15,31 @@
     "enabled" : true,
     "log" : "info",
     "server_port": 4222,
-    "token" : null
+    "token" : ".token"
   },
   "dslink_folder_name_2" : {
     "name" : "dslink_name_2",
     "enabled" : true,
     "log" : "debug",
-    "server_port": 4223,
-    "token" : null
+    "server_port": 4223
   }
 }
 ``` 
+- lcm_dslink.json only holds changed values.
 - read lcm_dslink.json
-- scan folders matching with "dslink_folder_name_X"
+- scan dslink folders
 
 ### installing new dslink
-- read dslink's default config from its dslink.json
-- import these values into lcm_dslink.json
+- read dslink's dslink.json
+- create new dslink_folder_name_X in lcm_dslink.json and set enabled property to true as default.
+
+### starting LCM
+* scan dslink folders
+* read dslink.json "information" and "configs" parts
+* if lcm_dslink.json does not have the dslink, 
+  - create as enabled=true
+  - run dslink with default parameters
+* if lcm_dslink.json has the dslink
+  - read related block in lcm_dslink.json
+  - override default values from dslink.json
+  - if enabled=true, run dslink
