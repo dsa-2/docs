@@ -30,7 +30,7 @@ Message Type Id : **82**
   * when class path doesn't start with `/`, it needs to be conbined with base path.-->
 * base path
   * base path is only needed when $is path points to local path
-  * initial response only need to have blank string "" in base path, and each level of broker will append the relative path to the dslink when forward this response to requester.
+  * when base path is needed, initial value will be "/". and each time a broker forward list response, it appends the relative path to the dslink
 
 ### special metas
 
@@ -38,6 +38,7 @@ Message Type Id : **82**
   * $is is the path to a node that contains the common action children and other nodes pre-defined for the same class
   * when $is path starts with `/` it's a path that either already known by the sdk or availible at every broker
   * when $is path doesn't start with `/`, it needs to be conbined with base path.
+    * when base path is empty, then the profile node is blank, $is is only used as a type identifier
 <!--
   * this field is optional in dsa v2 (while in v1 $is and the class header are combined together)
   * broker or sdk won't validate or check the value-->
