@@ -28,9 +28,11 @@ Message Type Id : **82**
   * Class header is the path to a node that contains the common action children and other nodes pre-defined for the same class
   * when class path starts with `/` it's a path that either already known by the sdk or availible at every broker
   * when class path doesn't start with `/`, it needs to be conbined with base path.-->
-* base path
-  * base path is only needed when $is path points to local path
-  * when base path is needed, initial value will be "/". and each time a broker forward list response, it appends the relative path to the dslink
+* pub path
+  * pub path is only needed in these cases
+    * $is is a path points to local profile node
+    * $icon is a path points to local icon node
+  * when pub path is needed, initial value will be "pub". and each time a broker forward list response, it appends the relative path to the dslink
 
 ### special metas
 
