@@ -162,7 +162,7 @@ The dynamic part of the header can contain the following data, formatted as key/
      indicate that everything currently in the cache are no longer valid, need to clear all the cache and only use new update
     </td></tr>
 <tr><td rowspan="2">21</td>
-    <td>Base Path</td>
+    <td>Pub Path</td>
     <td>Str</td>
     <td>response</td>
     <td>-</td>
@@ -171,7 +171,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>-</td>
     <td>-</td></tr>
     <tr><td colspan="8">
-      base path of a list response, only needed in the first response of a request, unless response is refreshed, see <a href="../methods/List.md">List</a>
+      path to the pub folder, only needed in the first response of a list request, unless response is refreshed, see <a href="../methods/List.md">List</a>
     </td></tr>
 <tr><td rowspan="2">30</td>
     <td>Skippable</td>
