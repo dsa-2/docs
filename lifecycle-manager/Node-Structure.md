@@ -2,7 +2,7 @@
 ## root node
 
 actions
- - Rescan
+ - Scan
  - Start all links
  - Stop all links
  - Enable all links
@@ -11,7 +11,7 @@ actions
     - from url
     - from zip
     - from repository
- - Restart Broker
+ - Restart broker
 
 ## dslink nodes
 
