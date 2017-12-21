@@ -18,7 +18,27 @@
   * if client reconnects before the cache is destroyed, they exchange the last ack id, and resume streams on both sides. Both sides should re-send proper update so they can keep track the last states of the streams
   * if client reconnects after the server's cache is destroyed, it should clear all cached values in streams, and both sides should re-send subscribe and list requests. other requests will be closed with error message
 
-# QOS
+# Stream Handling ( by sdk )
+* right after disconnection
+  * Streams should not be closed
+* 5 seconds after disconnection
+  * NotAvailible should be sent to all list and subscribe stream
+* 5 minutes after disconnection
+  * close all streams, distroy the session cache, except:
+    * list stream from requester side
+    * subscribe stream from requester side
+    * qos 2/3 subscribe stream from responder side, (will be move to special map, that ignores rid)
+  * subscribe stream with qos
+
+* if client reconnect back within 5 minutes, with the correct session id
+  * both side of the connection send their last ack id upon connection
+  * all the stream resend unacked message 
+* otherwise
+  * all the stream are closed
+  * sdk reinitialized list and subscribe streams from the requester side
+  * if other stream need to be reinitialized, it should be handled by user code
+
+## QOS Subscription
 * subscribe stream with QOS 2 or QOS 3 needs to be retained even after server clears other cache
 * QOS stream cache only works for dslink clients with unique connection. clients that allow multiple connections don't support QOS, i.e. web browser user using cookie based login
 * when a dslink is re-connected, it must re-send the same qos request within 60 seconds after the connection, otherwise the qos response stream for that request will be cleared
