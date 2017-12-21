@@ -21,8 +21,7 @@
 # Stream Handling ( by sdk )
 * right after disconnection
   * Streams should not be closed
-* 5 seconds after disconnection
-  * NotAvailible should be sent to all list and subscribe stream
+  * NotAvailible response should be sent to all list, subscribe, and invoke stream
 * 5 minutes after disconnection
   * close all streams, distroy the session cache, except:
     * list stream from requester side
