@@ -19,8 +19,7 @@ actions
 
  - Start
  - Restart
- - Stop (stop handler called, proper stop)
- - Force stop (kill the process)
+ - Stop
     - Try stopping properly for a while
     - If cannot, kill the process directly
  - Uninstall
