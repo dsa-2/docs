@@ -24,5 +24,5 @@ system nodes, always require config permission
 an action that stop the dslink
 
 parameter
-* token: a hash of timestamp and private key
+* token: a token to stop the dslink
 
