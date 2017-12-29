@@ -16,7 +16,7 @@ readAll(); // figure out what to do with saved data when broker starts
 
 ### Authorization
 
-See [Authorization](Authorization)
+See [Authorization](authorization)
 
 ## Packages
 

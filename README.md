@@ -1,17 +1,17 @@
 * Security
-  * [Authorization](protocol/Authorization.md)
+  * [Authorization](protocol/authorization.md)
 
 * Message
-  * [Header Structure](protocol/Header-Structure.md)
-  * [HandShake Message](handshake/Handshake-Message.md)
-  * [Subscribe](methods/Subscribe.md)
-  * [List](methods/List.md)
-  * [Invoke](methods/Invoke.md)
-  * [Set](methods/Set.md)
-  * [Close](methods/Close.md)
+  * [Header Structure](protocol/header-structure.md)
+  * [HandShake Message](handshake/handshake-message.md)
+  * [Subscribe](methods/subscribe.md)
+  * [List](methods/list.md)
+  * [Invoke](methods/invoke.md)
+  * [Set](methods/set.md)
+  * [Close](methods/close.md)
 
 * Broker 
-  * [Broker Component](Broker-Component.md)
+  * [Broker Component](broker-component.md)
 
 
 
