@@ -18,7 +18,7 @@
   * if client reconnects before the cache is destroyed, they exchange the last ack id, and resume streams on both sides. Both sides should re-send proper update so they can keep track the last states of the streams
   * if client reconnects after the server's cache is destroyed, it should clear all cached values in streams, and both sides should re-send subscribe and list requests. other requests will be closed with error message
 
-# Stream Handling ( by sdk )
+# Stream Handling (by sdk)
 * right after disconnection
   * Streams should not be closed
   * NotAvailible response should be sent to all list, subscribe, and invoke stream

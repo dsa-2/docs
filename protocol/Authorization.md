@@ -7,7 +7,7 @@
 #### checkToken
 Parameters:
 * token: The token data
-* dsId: (Optional) The dsId must be validated with auth before the token is checked.
+* dsId: (optional) The dsId must be validated with auth before the token is checked.
 
 Return: The default permission token for the client
 
