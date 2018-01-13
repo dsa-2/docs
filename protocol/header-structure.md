@@ -3,8 +3,10 @@ In DSA 2.0, messages are composed of a header and a body (payload). Message head
 ## Fixed structure
 The fixed header is used by all dsa2 messages.
 * Total length of message: 4 bytes
-  * In current version, total length is limited to 65472 bytes, (65536-64)
+  * In current version, total length is limited to 65472 bytes, (64K-64)
 * Header length: 2 bytes
+  * Header Length can not be bigger than 16320 bytes (16K-64)
+  * Body Length (Total-Header) can not be bigger than 49152 bytes (48K)
 * Method: 1 bytes
   * 01 / 81, subscribe ( request:01, response:81 )
   * 02 / 82, list
