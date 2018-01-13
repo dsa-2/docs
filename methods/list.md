@@ -44,7 +44,7 @@ Message Type Id : **82**
 <!--
   * this field is optional in dsa v2 (while in v1 $is and the class header are combined together)
   * broker or sdk won't validate or check the value-->
-* $type : indicate the [Value Type](../common/Value-Types.md) of the current node. 
+* $type : indicate the [Value Type](../common/value-types.md) of the current node. 
   * when this meta exists, it means the current node has a value that requester can subscribe.
 * $writable : indicate whether the node's value can be modified
   * the value is the minimal permission level requester needs to set the value
