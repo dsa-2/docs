@@ -103,8 +103,6 @@ var f2 = Buffer.concat([
 	makeUint16Buffer(clientToken.length), // length of client token, assume the length < 256
 	new Buffer(clientToken, 'utf8'), // token content
 	new Buffer([1]), // isResponder: true
-	new Buffer([0,0]), // blank session string
-	new Buffer([0,0,0,0]), // last ack id
 	new Buffer([0,0]), // blank server path string
 	clientAuth
 	]);
@@ -113,7 +111,7 @@ f2.writeUInt32LE(f2.length, 0); // total length
 console.log('\n handshake message f2, client -> broker:');
 console.log(f2.toString('hex'))
 /*
-450000000700f2130073616d706c655f746f6b656e5f737472696e67010000000000000000f58c10e212a82bf327a020679c424fc63e852633a53253119df74114fac8b2ba
+3f0000000700f2130073616d706c655f746f6b656e5f737472696e67010000f58c10e212a82bf327a020679c424fc63e852633a53253119df74114fac8b2ba
 */
 
 
@@ -135,10 +133,6 @@ var f3 = Buffer.concat([
 	new Buffer([0xf3]), // handshake message type f3
             // end of header
     new Buffer([1]), // allowRequester: true
-	makeUint16Buffer(clientSessionId.length), // length of client session string, assume the length < 256
-	new Buffer(clientSessionId, 'utf8'), // session string content
-	new Buffer([0,0,0,0]), // last ack id
-
 	makeUint16Buffer(clientPath.length), // length of client path, assume the length < 256
 	new Buffer(clientPath, 'utf8'), // path content
 	brokerAuth
@@ -148,7 +142,7 @@ f3.writeUInt32LE(f3.length, 0); // total length
 console.log('\n handshake message f3, broker -> client:');
 console.log(f3.toString('hex'))
 /*
-530000000700f301110073616d70652d73657373696f6e2d3030310000000012002f646f776e73747265616d2f6d6c696e6b31e709059f1ebb84cfb8c34d53fdba7fbf20b1fe3dff8c343050d2b5c7c62be85a
+3c0000000700f30112002f646f776e73747265616d2f6d6c696e6b31e709059f1ebb84cfb8c34d53fdba7fbf20b1fe3dff8c343050d2b5c7c62be85a
 */
 
 
