@@ -14,7 +14,7 @@ an alias for the current user/dslink's home folder
 
 if no home folder is defined, it will point home/default
 
-## modules
+## module
 modules running inside broker (same process), mananging users, dglux, security setting, etc. each module expose a dslink responder for configuration
 
 module nodes always require config permisison
