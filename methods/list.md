@@ -38,9 +38,9 @@ Message Type Id : **82**
 
 * $is : the profile node position
   * $is is the path to a node that contains the common action children and other nodes pre-defined for the same class
-  * when $is path starts with `/` it's a path that either already known by the sdk or availible at every broker
-  * when $is path doesn't start with `/`, it needs to be conbined with base path.
-    * when base path is empty, then the profile node is blank, $is is only used as a type identifier
+  * to get the full profile path, it needs to be conbined with pub path.
+    * when pub path is empty, then the profile node has no content, $is is only used as a type identifier, and there is no need to load
+  * when the profile path starts with number, like `2.0/` `2.1/`, then it's standard profile, requester might be able to load the data from local cache, this feature is optional.
 <!--
   * this field is optional in dsa v2 (while in v1 $is and the class header are combined together)
   * broker or sdk won't validate or check the value-->
