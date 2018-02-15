@@ -22,3 +22,18 @@ Parameters:
 * method
 
 Return: bool indicating whether the permission is allowed
+
+
+## request message headers
+
+#### Max Permission
+Sometimes a requester has a high permission level on the responder, but it send a request on behave of another device, which should have lower permission level.
+
+In that case a max permission header is added in the request so the responder can do the permisison check correctlly.
+
+| Level| Value | 
+|:-------------:|:-------------:|
+| List | 0x10 |  
+| Read | 0x20 | 
+| Write | 0x30 |  
+| Config| 0x40 | 
