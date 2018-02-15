@@ -23,9 +23,9 @@ log level
 * `all` : log everything
 * `trace`
 * `debug`
-* `info` 
+* `fine` 
 * `warn` errors that could happen in normal network and can be handled, for example, network disconnection, or DDOS attack
-* `sys` system log like dslink start, stop
+* `info` default log level, usually for things like dslink start, stop
 * `error` an error that's not supposed to happen, something in the network is not configured correctly
 * `admin` admin changes like add/remove devices, users
 * `fatal` fatal error that the system can not handle, dslink is forced to stop
