@@ -33,7 +33,7 @@ these message type don't need Request ID and Ack ID (any message type >= 0xF0)
 The dynamic part of the header can contain the following data, formatted as key/value pairs. The key is 1 byte long.
 
 <table>
-<tr><th>Code</th>
+<tr><th>Code<br>(hex)</th>
     <th>Name</th>
     <th>Len</th>
     <th>Type</th>
@@ -77,6 +77,30 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>request<br/>only</td></tr>
     <tr><td colspan="8">
       Included when a payload is too big to be delivered in a single message.
+    </td></tr>
+<tr><td rowspan="2">04</td>
+    <td>Audit Log</td>
+    <td>Str</td>
+    <td>response</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td></tr>
+    <tr><td colspan="8">
+      A log string for the parent broker to audit
+    </td></tr>
+<tr><td rowspan="2">05</td>
+    <td>Error Detail</td>
+    <td>Str</td>
+    <td>response</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td></tr>
+    <tr><td colspan="8">
+      Addition information for the error, this should only happen when there is extra information that can't be covered by just one byte status code header
     </td></tr>
 <tr><td rowspan="2">08</td>
     <td>Alias Count</td>
