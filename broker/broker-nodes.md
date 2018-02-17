@@ -34,8 +34,8 @@ a folder for public data
 
 always require list permission
 
-#### dsa
-a folder for all dsa predefined class definition, available in all brokers, not required for links
+#### 2.0 (dsa standard folders)
+any folder start with a number are reserved for dsa predefined class definition. starts from the folder `2.0`, which contains all the standard profile nodes for version 2.0
 
 #### alias 
 when upstream/downstream child node is alias, but its pub folder is not exposed, the pub folder will aliased here for public access
