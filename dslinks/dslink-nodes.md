@@ -1,28 +1,28 @@
 
 
 
-## main
+## Main
 main nodes
 
-## pub
+## Pub
 
 a folder for public data
 
 always require list permission
 
-#### defs
+#### Defs
 definition for common node structure
 
-#### icon
+#### Icon
 icon data for this dslink
 
 
-## sys
+## Sys
 system nodes, always require config permission
 
-#### stop
+#### Stop
 an action that stop the dslink
 
 parameter
-* token: a token to stop the dslink
+* Token: a token to stop the dslink
 
