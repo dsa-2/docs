@@ -17,6 +17,8 @@ Following rules are recommended, but not enforced by the dslink or broker. Also 
 
 * `Node_Name`
   * use capitalized word, and connect words with underscore
+* `Invoke_Action`
+  * action node use the same rule as node name, and it should start with a verb
 * `Action Parameter Name` and `Action Result Name`
   * use capitalized word, and connect words with space
 * `$node-metadata` and `@node-attribtue`
