@@ -10,3 +10,14 @@ a dsa node path is a string of node names separated by `/`
   * can't start with @ , reserved for node attribtue
   * can't start with $ , reserved for node metadata
   * can't be `.` or `..`
+
+## default naming for nodes
+
+Following rules are recommended, but not enforced by the dslink or broker. Also they do not apply on nodes imported from other system, like file system or other protocol.
+
+* `Node_Name`
+  * use capitalized word, and connect words with underscore
+* `Action Parameter Name` and `Action Result Name`
+  * use capitalized word, and connect words with space
+* `$node-metadata` and `@node-attribtue`
+  * use lowercase word, and connect words with hyphen 
