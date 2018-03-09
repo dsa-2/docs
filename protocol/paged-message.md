@@ -5,7 +5,7 @@ Paged message only blocks the message in the same stream (with same rid)
 ## Page ID
 Page ID is a [header](header-structure.md) that indicate the message is only a page of a full message.
 
-First Page Id is a negative number showing the total number of pages, for example, for a message that's splitted into 3 pages, the page id  of them will be -3,1,2
+First Page Id is a negative number showing the total number of pages, for example, for a message that's splitted into 3 pages, the page id  of them will be `-3` , `1` , `2`
 
 Undefined page
 
