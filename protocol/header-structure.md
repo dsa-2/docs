@@ -75,7 +75,7 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>both</td>
     <td>request<br/>only</td></tr>
     <tr><td colspan="8">
-      Included when a payload is too big to be delivered in a single message.
+      Included when a payload is too big to be delivered in a single message. A Non-zero value means this is part of a <a href="paged-message.md">paged message</a>
     </td></tr>
 <tr><td rowspan="2">04</td>
     <td>Audit Log</td>
