@@ -43,16 +43,16 @@ system nodes, always require config permission
 config nodes for the broker
 
 #### Clients
-manage [downstream dslinks and brokers](edge/clients.md)
+manage [downstream dslinks and brokers](edge-broker/clients.md)
 
 #### Upstream
 manager upstream brokers
 
 #### Permissions
-[permissions](edge/permissions.md) settings
+[permissions](edge-broker/permissions.md) settings
 
 #### Quaratine
 protected area for quarantined dslinks
 
 #### Tokens
-[tokens](edge/tokens.md) to connect downstream clients
+[tokens](edge-broker/tokens.md) to connect downstream clients
