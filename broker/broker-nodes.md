@@ -52,7 +52,7 @@ manager upstream brokers
 [permissions](edge-broker/permissions.md) settings
 
 #### Quaratine
-protected area for quarantined dslinks
+protected area for [quarantined dslinks](edge-broker/quarantine.md)
 
 #### Tokens
 [tokens](edge-broker/tokens.md) to connect downstream clients
