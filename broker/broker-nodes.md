@@ -20,9 +20,6 @@ downstream dslinks/brokers
 ## Upstream
 up stream brokers
 
-## Quaratine
-protected area for quarantined dslinks
-
 ## Pub
 
 a folder for public data
@@ -45,3 +42,17 @@ system nodes, always require config permission
 #### Config
 config nodes for the broker
 
+#### Clients
+manage [downstream dslinks and brokers](edge/clients.md)
+
+#### Upstream
+manager upstream brokers
+
+#### Permissions
+[permissions](edge/permissions.md) settings
+
+#### Quaratine
+protected area for quarantined dslinks
+
+#### Tokens
+[tokens](edge/tokens.md) to connect downstream clients
