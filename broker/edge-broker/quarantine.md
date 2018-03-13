@@ -9,7 +9,7 @@
   * node name is the [dsid](../../common/dsid.md)
   
 
-## Pub/2.0/Broker/Client profile
+## Pub/2.0/Broker/Quarantine_Client profile
 
 * **Authorize**
   * $invokable:config
