@@ -12,7 +12,7 @@
     * $is:Pub/2.0/Broker/Permission_Group
     * the default permisison group
 
-permission check always run on long path before short path, this will make sure path like `Downstream/Link1` has a higher priority than `Downstream`
+permission check always run on long path before short path, this will make rule for `Downstream/Link1` has a higher priority than `Downstream`
 
 ## Pub/2.0/Broker/Permission_Group profile
 * **Add_Rule**
