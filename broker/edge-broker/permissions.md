@@ -9,7 +9,7 @@
   * **permission rule node** (for every permisison rule in a group)
     * $is:Pub/2.0/Broker/Permission_Rule 
   * **default**
-    * $is:Pub/2.0/Broker/Permission_Rule
+    * $is:Pub/2.0/Broker/Permission_Group
     * the default permisison rule
 
 permission check always run on long path before short path, this will make sure path like `Downstream/Link1` has a higher priority than `Downstream`
