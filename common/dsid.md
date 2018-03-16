@@ -11,5 +11,5 @@ example: `link-dataflow-s-R9RKdvC2VNkfRwpNDMMpmT_YWVbhPLfbIc-7g4cpc`
 
 ### reserved dsid usecase
 
-* non-device dsid may contains other characters, i.e. `@` are reserved for email address, but dsid should still follow the rule of a [valid node name](path.md)
+* non-device dsid may contains other characters, i.e. `@` can be used if dsid is an email address, but dsid should still follow the rule of a [valid node name](path.md)
 * dsid shorter than 43 characters are reserved for user names
