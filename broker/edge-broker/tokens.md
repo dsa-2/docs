@@ -28,6 +28,10 @@
   * $invokable:config
   * action to remove the token
     * if token managed=true, search the Sys/Clients for any client that use this token and destroy it
+    
+* **Remove_All_Clients**
+  * $invokable:config
+  * action to remove all the clients connected with this toekn regardless if token is managed or not
 
 * **Regenerate**
   * $invokable:config
@@ -35,7 +39,9 @@
 
 * **Time_Range**
   * $type:string, $writable:config
-  * when can the token be used, when token expired it will remove itself
+  * when can the token be used
+  * token expired it will remove itself and clients will be removed if it's managed
+
 
 * **Count**
   * $type:number, $writable:config

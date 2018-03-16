@@ -16,6 +16,10 @@
   * action to remove the Client, 
     * disconnect all connections
     * remove the node from Downstream and Sys/Clients
+* **Detatch_Token**
+  * $invokable:config
+  * action to clear the From_Token field, 
+    * if it's a managed token, the token will no longer be able to remove the client
 * **Group** 
   * $type:string, $writable:config
   * string point for the client's permission group string
@@ -31,6 +35,6 @@
 * **Current_Session**
   * $type:number
   * current number of seesions that's connected with the client's dsid
-* **Default_Token**
-  * $type:string, $writable:config
-  * string point for the client's default token at permission check
+* **From_Token**
+  * $type:string
+  * 16 bytes token name, which token this client was created from
