@@ -16,7 +16,7 @@
   * action to remove the Client, 
     * disconnect all connections
     * remove the node from Downstream and Sys/Clients
-* **Detatch_Token**
+* **Detach_Token**
   * $invokable:config
   * action to clear the From_Token field, 
     * if it's a managed token, the token will no longer be able to remove the client
