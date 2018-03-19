@@ -16,4 +16,4 @@ The status codes in the range from 00 to 0F correspond to the codes from 80 to F
 | 48| Busy| Client cannot accept additional requests|
 | 50| Internal Error | Responder code has a internal error, check the `Error Detail` header for more information. |
 | 61 | Alias loop| The number of aliased routings for this request has exceeded the maximum allowed. 
-| F9 | Connection error, Incorrect auth value| 
+| 79 | Connection error, Incorrect auth value| 
