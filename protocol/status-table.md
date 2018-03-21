@@ -17,3 +17,4 @@ The status codes in the range from 00 to 0F correspond to the codes from 80 to F
 | 50| Internal Error | Responder code has a internal error, check the `Error Detail` header for more information. |
 | 61 | Alias loop| The number of aliased routings for this request has exceeded the maximum allowed. 
 | C9 | Connection error, Incorrect auth value| 
+| F0 ~ FF | Reserved| Should never be sent to the network. So it is safe to use these code for internal status that's not related to protocl| 
