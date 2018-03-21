@@ -81,9 +81,9 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Audit Log</td>
     <td>Str</td>
     <td>response</td>
-    <td>✓</td>
-    <td>✓</td>
-    <td>✓</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
     <td>✓</td>
     <td>✓</td></tr>
     <tr><td colspan="8">
@@ -93,9 +93,9 @@ The dynamic part of the header can contain the following data, formatted as key/
     <td>Error Detail</td>
     <td>Str</td>
     <td>response</td>
-    <td>✓</td>
-    <td>✓</td>
-    <td>✓</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
     <td>✓</td>
     <td>✓</td></tr>
     <tr><td colspan="8">
