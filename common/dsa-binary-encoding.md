@@ -17,7 +17,7 @@ neither key nor value can be bigger than 32767 bytes
 
 * key length, 2 bytes LE
 * key data
-* total value, 2 bytes LE
+* value length, 2 bytes LE
 * value data (msgpack encoding)
 
 
