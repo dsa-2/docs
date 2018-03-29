@@ -1,10 +1,8 @@
 
 [An Example of Handshake algorithm implemented in nodejs](handshake-algorithm.node.js)
 
-## Client Info (always non-secure)
+## Client Info
 Message type ID: **F0**
-
-In websocket mode, the dsId must also be sent in the URL query string.
 
 * version: 2 bytes. The current version is 2.0, encoded as 0x02, 0x00
 * dsId: broker dsId, [string data](../common/dsa-binary-encoding.md#string-encoding)
@@ -12,7 +10,7 @@ In websocket mode, the dsId must also be sent in the URL query string.
 * salt: 32 bytes
 <!--* encryption: 1 byte (0x00 = plain connection, 0x01 = aes256-ctr). Encryption is not needed for a secure TCP or WSS-->
 
-## Broker Info (always non-secure)
+## Broker Info
 Message type ID: **F1**
 
 * dsId: broker dsId, [string data](../common/dsa-binary-encoding.md#string-encoding)
@@ -30,7 +28,7 @@ The broker returns blank data if one of the following errors occurs:
 ## Handshake request body structure 
 Message type ID: **F2**
 
-In secure mode, this is the first message that is encrypted in aes
+<!--In secure mode, this is the first message that is encrypted in aes-->
 
 * clientToken: [string data](../common/dsa-binary-encoding.md#string-encoding). For an empty token, use an empty string, a single byte containing 0.
 * isResponder: 1-byte bool value, 0x00 for false, 0x01 for true
