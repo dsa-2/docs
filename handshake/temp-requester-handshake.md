@@ -46,4 +46,4 @@ A user_auth token is on the hard disk, that can be accessed by both broker and w
 
 when web server received a client request to generate clientToken, it calculate this
 
-`signature = url_base64(sha256( UTF("$username,$permission_group") + user_auth_binary + salt_binary ))`
+`signature = url_base64(sha256( UTF8("$username,$permission_group") + user_auth_binary + salt_binary ))`
