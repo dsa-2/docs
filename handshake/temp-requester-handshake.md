@@ -2,7 +2,7 @@
 
 A temporary requester user doesn't have a predefined client in the broker, he's connected with a one time token which include his permisison group.
 
-the browser user client still need to do [4 steps handshake F0~F3](handshake-message.md) like a normal dsa client, but it can skip the ECDH authorization.
+the temporary requester user client still need to do [4 steps handshake F0~F3](handshake-message.md) like a normal dsa client, but it can skip the ECDH authorization.
 
 ## Difference in handshake messages
 
