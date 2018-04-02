@@ -19,7 +19,7 @@ no difference
 Message type ID: **F2**
 
 * isResponder: always false
-* auth: all 0
+* auth: not used, can be any value
 * path: always blank string
 * clientToken: a token generated from the web server 
   * comma separated string `id,permission_group,signature`
@@ -29,7 +29,7 @@ Message type ID: **F2**
 
 * allowRequester: always false
 * path: always blank string
-* auth: all 0
+* auth: not used, can be any value
 
 
 ## Workflow of the clientToken generation
