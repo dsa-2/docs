@@ -22,7 +22,7 @@ Message type ID: **F2**
 * auth: not used, can be any value
 * path: always blank string
 * clientToken: a token generated from the web server 
-  * semicolon separated string `id;permission_group;signature`
+  * semicolon separated string `permission_group;id;signature`
 
 ### Handshake response body structure (F3)
 
@@ -46,4 +46,4 @@ A user_auth token is on the hard disk, that can be accessed by both broker and w
 
 when web server received a client request to generate clientToken, it calculate this
 
-`signature = url_base64(sha256_hmac(user_auth_binary).hash( UTF8("$username;$permission_group") + salt_binary ))`
+`signature = url_base64(sha256_hmac(user_auth_binary).hash( UTF8("$permission_group;$username") + salt_binary ))`
