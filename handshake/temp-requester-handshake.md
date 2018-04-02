@@ -22,7 +22,7 @@ Message type ID: **F2**
 * auth: not used, can be any value
 * path: always blank string
 * clientToken: a token generated from the web server 
-  * comma separated string `id,permission_group,signature`
+  * semicolon separated string `id;permission_group;signature`
 
 ### Handshake response body structure (F3)
 
