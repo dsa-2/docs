@@ -33,7 +33,7 @@ Message type ID: **F2**
 * clientToken: [string data](../common/dsa-binary-encoding.md#string-encoding). For an empty token, use an empty string, a single byte containing 0.
 * isResponder: 1-byte bool value, 0x00 for false, 0x01 for true
 * path: [string data](../common/dsa-binary-encoding.md#string-encoding). Location of the server on the client. If client itself is not a broker, this value must be empty string.
-* auth: binary of sha256 data, fixed 32 bytes. auth = sha256(serverSalt + SharedSecret)
+* auth: binary of sha256 data, fixed 32 bytes. auth = sha256_hmac(SharedSecret)(serverSalt)
 
 
 ## Handshake response body structure
@@ -41,7 +41,7 @@ Message type ID: **F3**
 
 * allowRequester: 1-byte bool value, allow client to send request or not
 * path: [string data](../common/dsa-binary-encoding.md#string-encoding). Location of the client on the broker if the client is a responder. And when client is not a responder, path must be an empty string.
-* auth: binary of sha256 data, fixed 32 bytes. auth = sha256(client Salt + SharedSecret)
+* auth: binary of sha256 data, fixed 32 bytes. auth = sha256_hmac(SharedSecret)(clientSalt)
 
 
 The broker returns blank data if one of the following errors occurs:
