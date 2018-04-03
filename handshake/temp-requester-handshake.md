@@ -42,8 +42,8 @@ Message type ID: **F2**
 
 ## Algorithm of generating the signature
 
-A user_auth token is on the hard disk, that can be accessed by both broker and web server during their initialization. ( If web server needs to run remotely, it should run a dslink that subscribe to the user_token. )
+A requester_auth_key is on the hard disk, that can be accessed by both broker and web server during their initialization. ( If web server needs to run remotely, it should run a dslink that subscribe to the requester_auth_key. )
 
 when web server received a client request to generate clientToken, it calculate this
 
-`signature = url_base64(sha256_hmac(user_auth_binary).hash( UTF8("$permission_group;$userid") + salt_binary ))`
+`signature = url_base64(sha256_hmac(requester_auth_key).hash( UTF8("$permission_group;$userid") + salt_binary ))`
