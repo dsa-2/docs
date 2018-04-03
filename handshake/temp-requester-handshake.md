@@ -42,7 +42,7 @@ Message type ID: **F2**
 
 ## Algorithm of generating the signature
 
-A requester_auth_key is on the hard disk, that can be accessed by both broker and web server during their initialization. ( If web server needs to run remotely, it should run a dslink that subscribe to the requester_auth_key. )
+A requester-auth-key file is on the hard disk, that can be accessed by both broker and web server during their initialization. ( If web server needs to run remotely, it should run a dslink that subscribe to the requester_auth_key. )
 
 when web server received a client request to generate clientToken, it calculate this
 
