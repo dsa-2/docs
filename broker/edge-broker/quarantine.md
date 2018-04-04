@@ -17,7 +17,7 @@
   * parameters (for more detail check [Clients](clients.md) )
     * Path: downstream path
       * type:string
-    * Group: permisison group
+    * Role: permisison role
       * type:string
     * Max_Session: max number of clients that can connect at same time, default 1
       * type:number
