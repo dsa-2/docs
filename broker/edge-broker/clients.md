@@ -20,9 +20,9 @@
   * $invokable:config
   * action to clear the From_Token field, 
     * if it's a managed token, the token will no longer be able to remove the client
-* **Group** 
+* **Role** 
   * $type:string, $writable:config
-  * string point for the client's permission group string
+  * string point for the client's permission role string
 * **Path**
   * $type:string, $writable:config
   * string point for the Client's responder path, usually starts with Downstream
