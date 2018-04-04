@@ -48,8 +48,8 @@ manage [downstream dslinks and brokers](edge-broker/clients.md)
 #### Upstream
 manager upstream brokers
 
-#### Permissions
-[permissions](edge-broker/permissions.md) settings
+#### Roles
+[permission roles](edge-broker/permissions.md) settings
 
 #### Quaratine
 protected area for [quarantined dslinks](edge-broker/quarantine.md)
