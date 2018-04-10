@@ -8,7 +8,7 @@
   * $is:Pub/2.0/Broker/Permission_Role 
   * **permission rule node** (for every permisison rule in a role)
     * $is:Pub/2.0/Broker/Permission_Rule 
-* **default**
+* **Default**
   * $is:Pub/2.0/Broker/Permission_Role
   * the default permisison role
 
