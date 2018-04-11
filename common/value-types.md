@@ -41,7 +41,7 @@ Map object with key/value pairs. Key is always a string, and value is always of 
 ## array
 An array, children values are always of type dynamic.
 
-### Examples
+#### Examples
 * [{"name":"Rick", "email":"rick\@iot-dsa.org"}, {"name":"Dennis", "email":"dennis\@iot-dsa.org"}]
 * [2,3,5,7,11]
 
