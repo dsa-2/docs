@@ -9,6 +9,7 @@ the temporary requester user client still need to do [4 steps handshake F0~F3](h
 ### Client Info (F0)
 
 * dsId: the username, must be less than 43 bytes
+* publicKey: not used, can be any value
 
 ### Broker Info (F1)
 
