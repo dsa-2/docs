@@ -6,7 +6,7 @@ Message type ID: **F0**
 
 * version: 2 bytes. The current version is 2.0, encoded as 0x02, 0x00
 * dsId: client dsId, [string data](../common/dsa-binary-encoding.md#string-encoding)
-* publicKey: The broker public key, binary ECPoint data in in X9.63 format, fixed length of 65 bytes
+* publicKey: The client public key, binary ECPoint data in in X9.63 format, fixed length of 65 bytes
 * salt: 32 bytes
 <!--* encryption: 1 byte (0x00 = plain connection, 0x01 = aes256-ctr). Encryption is not needed for a secure TCP or WSS-->
 
