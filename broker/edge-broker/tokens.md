@@ -14,6 +14,10 @@
     * Managed: manage dslink with this token
       * type: bool
       * when true Sys/Clients/client-id/Token node will be set to the name of token
+    * Temprary: whether broker remember dslink after its connected with this token
+      * type: bool
+      * if false, broker will save the information and next time the dslink connects, broker won't check token next time same dslink is connected
+      * if true, dslink will need to connect with the token every time
   * output:
     * Name: token name (first 16 bytes of the token)
     * Token: full token (48 bytes)
@@ -51,6 +55,9 @@
   * $type:number, $writable:config
 
 * **Managed**
+  * $type:bool, $writable:config
+  
+* **Temporary**
   * $type:bool, $writable:config
 
 * **Token**
