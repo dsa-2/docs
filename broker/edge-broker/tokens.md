@@ -4,7 +4,7 @@
   * $invokable:config
   * action to add a permission group
   * parameters:
-    * Group: permission group for this token
+    * Role: permission role for this token
     * Time_Range: how long the token can be used
       * type: string, editor: timerange
     * Count: number of times this token can be used
@@ -14,10 +14,6 @@
     * Managed: manage dslink with this token
       * type: bool
       * when true Sys/Clients/client-id/Token node will be set to the name of token
-    * Temprary: whether broker remember dslink after its connected with this token
-      * type: bool
-      * if false, broker will save the information and next time the dslink connects, broker won't check token next time same dslink is connected
-      * if true, dslink will need to connect with the token every time
   * output:
     * Name: token name (first 16 bytes of the token)
     * Token: full token (48 bytes)
@@ -41,11 +37,14 @@
   * $invokable:config
   * action to change the token, token name (first 16 bytes) won't be changed, but the next 32 bytes get a new random string
 
+* **Role**
+  * $type:string, $writable:config
+  * permission role that will be assigned to dslinks that connect with this token
+  
 * **Time_Range**
   * $type:string, $editor:daterange, $writable:config
   * when can the token be used
   * token expired it will remove itself and clients will be removed if it's managed
-
 
 * **Count**
   * $type:number, $writable:config
@@ -57,9 +56,6 @@
 * **Managed**
   * $type:bool, $writable:config
   
-* **Temporary**
-  * $type:bool, $writable:config
-
 * **Token**
   * $type:string
   * full token string, read only
