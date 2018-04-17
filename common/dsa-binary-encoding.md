@@ -11,7 +11,7 @@ all string are UTF-8 encoded, but broker is not required to validate the encodin
 
 ## Key Value Pairs Encoding
 
-key valur pairs encoding is mainly used by list response
+key value pairs encoding is mainly used by list response
 
 neither key nor value can be bigger than 32767 bytes
 
