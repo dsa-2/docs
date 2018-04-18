@@ -23,7 +23,7 @@ Return: max permission level that the client is allowed on this path
 #### Permission Token
 
 A string that stores the authorization information about the client.
-The implementation of Authorizer module controls what's stored in the token and how is checked.
+The implementation of Authorizer module controls what's stored in the token and how it's checked.
 
 
 #### Max Permission
