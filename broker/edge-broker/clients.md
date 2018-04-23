@@ -32,6 +32,7 @@
   * $type:number, $writable:config
   * max session of the client
   * when Path is not blank, this value should always be 1
+  * Subscription 2 and 3 is not supported when max_session is not 1
 * **Current_Session**
   * $type:number
   * current number of seesions that's connected with the client's dsid
