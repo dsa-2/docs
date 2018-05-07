@@ -20,9 +20,6 @@
   * $type:bool
   * $writable:config
   * after changing any of the following values, need to set enabled to false and true to restart it.
-* **Name_On_Local**
-  * $type:string
-  * $writable:config
 * **Url**
   * $type:string
   * $writable:config
