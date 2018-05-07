@@ -3,9 +3,8 @@
   * $invokable:config
   * action to add an upstream connection
   * parameters:
-    * Name_On_Local: upstream name
+    * Name: upstream name
     * Url: broker url
-    * Name_On_Remote: self name
     * Token: optional token
     * Role: role given to remote broker to allow it access this broker
  
