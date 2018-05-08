@@ -34,7 +34,7 @@
 * **Status**
   * $type:string
     * value could be `Connecting` `Connected` `Reconnecting` `Disconnected`
-* **Remote_Dsid**
+* **Remote_Id**
   * $type:string
 * **Remote_Path**
   * $type:string 
