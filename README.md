@@ -1,5 +1,4 @@
-* Security
-  * [Authorization](protocol/authorization.md)
+
 
 * Message
   * [Header Structure](protocol/header-structure.md)
@@ -10,8 +9,7 @@
   * [Set](methods/set.md)
   * [Close](methods/close.md)
 
-* Broker 
-  * [Broker Component](broker-component.md)
+* [Breaking change from v1](v2-changes.md)
 
 
 
