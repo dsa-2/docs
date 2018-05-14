@@ -31,6 +31,6 @@
 
 #### reason
 
-* dsa subscription is designed to broadcast value to multiple requesters, the responder doesn't know which request or how many requesters are reading the value. When there are multiple layers of broker, each layer gives the ownership to its direct requester/broker as soon as that requester receives the value. And in the case of qos 3 (v1), each layer of broker needs to have a storage to persist the value, therefore the reliability of the qos queue depends on the least robust layer of broker in the network. 
+* When there are multiple layers of broker, each layer of broker needs to have a storage to persist the value for a qos 3 queue, therefore the reliability of the qos queue depends on the least robust layer of broker in the network. 
 * Another source of failure can happen at the final data consumer. Broker will clear the qos cache as soon as requester confirm the data is received. But that doesn't mean the data is handled and processed correctly. If requester dslink crashs and restarts during processing and then request again for the last value before the restart, broker would already have removed that value from cache.
 * A better solution is to setup a database or value cache dslink on the nearest node of the source responder dslink, and other requesters that need a persisted queue should always talk to the value cache dslink. This reduced the risk of losing data since data loss can only be cause by the storage failure of one layer, the failure of other layers can be resolved if requester read value from that cache again.
