@@ -11,7 +11,7 @@
 
 ## Drop support of json format
 
-* v2 message header use a simple binary encoding format, and message body use msgpack format
+* v2 message header use a simple binary encoding format, and message body always use msgpack format
 
 #### reason
 
@@ -27,7 +27,7 @@
 
 ## Drop support of qos 3
 
-* qos 0/1/2 is still same as dsa v1. but qos 3 is dropped, means broker and dslink are no longer required to have a storage to persist the subscription queue.
+* qos 0/1/2 is still same as dsa v1. but qos 3 is dropped, which means broker and dslink are no longer required to have a storage to persist the subscription queue.
 
 #### reason
 
