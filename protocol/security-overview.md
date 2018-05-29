@@ -44,6 +44,7 @@ permisison roles are limited to the scope of current broker, there are 2 ways to
 2. Use `Permission Token` header
   * When multiple brokers are in the same authorization network, like Oauth. A permission token header can be used to request
   * Each broker will check the permission token header and the make the decision whether to allow it, block it, or pass through the request and let downstream make decision.
+  * For list and subscribe requests with permission token, a preflight request will be sent to downstream first to check the permission before a real stream is created. This way requests on same node can be merged into one stream.
   * dslink and broker should block all requests with permission token they can't understand.
  
 
