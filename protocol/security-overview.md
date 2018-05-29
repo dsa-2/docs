@@ -34,7 +34,7 @@ unlike v1, in which dslink might inherite other permisison Group automaticly, li
 When dslink access a node, [broker checks all the rules associated with its permission role](../broker/edge-broker/permissions.md), and return the permission level. When multiple rules match, it uses the one with more specific path or longer path.
 If there is no matching rule, broker then check the fallback role if exists and continue the fallback chain.
 
-#### Cross broker permission
+#### Cross broker permission check
 
 permisison roles are limited to the scope of current broker, there are 2 ways to achieve permission checking cross multiple broker
 
