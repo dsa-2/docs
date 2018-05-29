@@ -11,6 +11,7 @@ A client can send a permission token with each method in the request message hea
 
 Parameters:
 * dsid
+* role
 * permissionToken
 * path
 * method
