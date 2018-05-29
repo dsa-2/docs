@@ -26,7 +26,7 @@ The default token validation in C++ edge broker uses the [same algorithm as dsa 
 
 #### Permission Roles
 
-Each dslink is assciated with a permission role, or comma separated multiple roles. all roles must be explictly defined for the clients.
+Each dslink is associated with a permission role, or comma separated multiple roles. all roles must be explictly defined for the clients.
 unlike v1, in which dslink might inherite other permisison Group automaticly, like the group `trustedLinks` and `default`
 
 #### Permission check * 
