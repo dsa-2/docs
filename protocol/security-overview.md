@@ -26,8 +26,8 @@ The default token validation in C++ edge broker uses the [same algorithm as dsa 
 
 #### Permission Roles
 
-Each dslink is associated with a permission role, or comma separated multiple roles. all roles must be explictly defined for the clients.
-unlike v1, in which dslink might inherite other permisison Group automaticly, like the group `trustedLinks` and `default`
+Each dslink is associated with a permission role, or comma separated multiple roles. all roles must be explicitly defined for the clients.
+unlike v1, in which dslink might inherit other permission Group automatically, like the group `trustedLinks` and `default`
 
 #### Permission check * 
 
@@ -36,11 +36,11 @@ If there is no matching rule, broker then check the fallback role if exists and 
 
 #### Cross broker permission check
 
-permisison roles are limited to the scope of current broker, there are 2 ways to achieve permission checking cross multiple broker
+permission roles are limited to the scope of current broker, there are 2 ways to achieve permission checking cross multiple broker
 
 1. Combine permission of broker and the dslink
   * Broker first check the permission locally, if dslink get enough permission level for the operation, it forward the request to downstream and downstream will do another check with the current broker's role on that downstream broker.
-  * If broker is not sure if the permissio level is enough, it add a `Max Permission` header when forwaring the request so the downstream wont allow the dslink to use anything higher than that permission level even when the current broker is allowed to.  
+  * If broker is not sure if the permission level is enough, it add a `Max Permission` header when forwarding the request so the downstream wont allow the dslink to use anything higher than that permission level even when the current broker is allowed to.  
 2. Use `Permission Token` header
   * When multiple brokers are in the same authorization network, like Oauth. A permission token header can be used to request
   * Each broker will check the permission token header and the make the decision whether to allow it, block it, or pass through the request and let downstream make decision.
@@ -53,3 +53,5 @@ permisison roles are limited to the scope of current broker, there are 2 ways to
 * List of features mentioned in this doc, but not planed to implement in the default c++ edge broker yet. these feature can be implemented in modules
   * multiple roles for one dslink
   * forward `Permission Token` header to downstream/upstream
+
+
