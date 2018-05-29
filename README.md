@@ -8,7 +8,7 @@
   * [Invoke](methods/invoke.md)
   * [Set](methods/set.md)
   * [Close](methods/close.md)
-
+* [Security Overview](protocol/security-overview.md)
 * [Breaking change from v1](v2-changes.md)
 
 
