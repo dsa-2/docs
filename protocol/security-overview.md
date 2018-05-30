@@ -31,8 +31,20 @@ unlike v1, in which dslink might inherit other permission Group automatically, l
 
 #### Permission check * 
 
-When dslink access a node, [broker checks all the rules associated with its permission role](../broker/edge-broker/permissions.md), and return the permission level. When multiple rules match, it uses the one with more specific path or longer path.
-If there is no matching rule, broker then check the fallback role if exists and continue the fallback chain.
+Each role has a map of `path -> permissionLevel` and a optional fallback role.
+
+the enum of permission levels are
+* none : block all request
+* list : only allow list request
+* read : allow list and subscribe
+* write : read + allow write attribtues
+* config : allow config actions
+
+action can define it's premission requirement of read/write/config in the $invokable metadata <br>
+writable node value can define the permission requirement of write/config in the $writable metadata
+
+When dslink access a node, [broker checks all the rules associated with its permission role](../broker/edge-broker/permissions.md), and return the permission level. When multiple rules match, it uses the one with more specific path or longest path.
+If there is no matching rule, broker then check the fallback role if exists and do it recursively.
 
 #### Cross broker permission check
 
