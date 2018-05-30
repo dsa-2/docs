@@ -9,7 +9,7 @@ Server->Client: F1: ServerId, ServerPubKey, ServerSalt
 Client->Server: F2: ClientAuth, ClientToken?
 note left of Server: ClientAuth = sha256_hmac(SharedSecret).hash(ServerSalt)
 Server->Client: F3: ServerAuth
-note right of Client: SlientAuth = sha256_hmac(SharedSecret).hash(CerverSalt)
+note right of Client: ServerAuth = sha256_hmac(SharedSecret).hash(ClientSalt)
 -->
 
 ![handshake](../assets/handshake.svg)
