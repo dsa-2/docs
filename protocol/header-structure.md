@@ -12,6 +12,7 @@ The fixed header is used by all dsa2 messages.
   * 02 / 82, list
   * 03 / 83, invoke
   * 04 / 84, set
+  * 07 / 87, preflight request ( to check the permission of subscribe of list )
   * 0F, close
   * F0 / F1 / F2 / F3, handshake
   * F8, Ack
