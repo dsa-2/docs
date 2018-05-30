@@ -2,6 +2,8 @@
 
 [Handshake Messages](../handshake/handshake-message.md)
 
+Handshake is based on [ECDH](http://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman) with the NIST recommended curve P-256, also known as secp256r1.
+
 <!--
 https://sequencediagram.org
 Client->Server: F0: ClientId, ClientPubKey, ClientSalt
