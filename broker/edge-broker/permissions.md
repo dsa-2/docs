@@ -1,4 +1,4 @@
-## Sys/Permissions main children
+## Sys/Roles main children
 * **Add**
   * $invokable:config
   * action to add a permission role
