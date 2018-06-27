@@ -20,6 +20,7 @@ permission check always run on long path before short path, this will make rule 
   * parameters:
     * Path: node path
       * type:string
+      * the path will converted to a the node name of rule node, url escape will be applied to the string on invalid characters
     * Permission: permission level
       * type:string, editor:`enum[none,list,read,write,config]`
 * **Fallback**
