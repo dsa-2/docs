@@ -2,7 +2,7 @@
 
 * **Add**
   * $invokable:config
-  * action to add a permission group
+  * action to add a token
   * parameters:
     * Role: permission role for this token
     * Time_Range: how long the token can be used
