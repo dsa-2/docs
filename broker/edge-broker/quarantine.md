@@ -1,17 +1,17 @@
-## Sys/Quaratine main children
+## sys/quarantine main children
 
-* **Enabled**
+* **enabled**
   * $type:bool, $writable:config
   * bool point that control if an unknown link would connect to quarantine
   * default true
 * **quarantine client nodes**
-  * $is:Pub/2.0/Broker/Quarantine_Client
+  * $is:pub/2.0/broker/quarantine-client
   * node name is the [dsid](../../common/dsid.md)
   
 
-## Pub/2.0/Broker/Quarantine_Client profile
+## pub/2.0/broker/quarantine-client profile
 
-* **Authorize**
+* **authorize**
   * $invokable:config
   * action to remove the link from quaratine, and add to Sys/Client and Downstream, 
   * parameters (for more detail check [Clients](clients.md) )

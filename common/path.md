@@ -15,9 +15,9 @@ a dsa node path is a string of node names separated by `/`
 
 Following rules are recommended, but not enforced by the dslink or broker. Also they do not apply on nodes imported from other system, like file system or other protocol.
 
-* `Node_Name`
-  * use capitalized word, and connect words with underscore
-* `Invoke_Action`
+* `node-name`
+  * use lowercase word, and connect words with hyphen 
+* `invoke-action`
   * action node use the same rule as node name, and it should start with a verb
 * `Action Parameter Name` and `Action Result Name`
   * use capitalized word, and connect words with space

@@ -1,6 +1,6 @@
-## Sys/Tokens main children
+## sys/tokens main children
 
-* **Add**
+* **add**
   * $invokable:config
   * action to add a token
   * parameters:
@@ -13,50 +13,50 @@
       * type: number
     * Managed: manage dslink with this token
       * type: bool
-      * when true Sys/Clients/client-id/Token node will be set to the name of token
+      * when true sys/clients/client-id/token node will be set to the name of token
   * output:
     * Name: token name (first 16 bytes of the token)
     * Token: full token (48 bytes)
 
 * **token node** (for every token)
-  * $is:Pub/2.0/Broker/Token
+  * $is:pub/2.0/broker/token
   * node name is the first 16 bytes of the token
 
-## Pub/2.0/Broker/Token profile
+## pub/2.0/broker/token profile
 
-* **Remove**
+* **remove**
   * $invokable:config
   * action to remove the token
-    * if token managed=true, search the Sys/Clients for any client that use this token and destroy it
+    * if token managed=true, search the sys/clients for any client that use this token and destroy it
 
-* **Remove_All_Clients**
+* **remove-all-clients**
   * $invokable:config
   * action to remove all the clients connected with this toekn regardless if token is managed or not
 
-* **Regenerate**
+* **regenerate**
   * $invokable:config
   * action to change the token, token name (first 16 bytes) won't be changed, but the next 32 bytes get a new random string
 
-* **Role**
+* **role**
   * $type:string, $writable:config
   * permission role that will be assigned to dslinks that connect with this token
   
-* **Time_Range**
+* **time-range**
   * $type:string, $editor:daterange, $writable:config
   * when can the token be used
   * token expired it will remove itself and clients will be removed if it's managed
 
-* **Count**
+* **count**
   * $type:number, $writable:config
   * how many times the token can be used
 
-* **Max_Session**
+* **max-session**
   * $type:number, $writable:config
 
-* **Managed**
+* **managed**
   * $type:bool, $writable:config
   
-* **Token**
+* **token**
   * $type:string
   * full token string, read only
 
