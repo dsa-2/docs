@@ -5,11 +5,11 @@
   * action to add a token
   * parameters:
     * Role: permission role for this token
-    * Time_Range: how long the token can be used
+    * Time Range: how long the token can be used
       * type: string, editor: timerange
     * Count: number of times this token can be used
       * type: number
-    * Max_Session: default max session of the client
+    * Max Session: default max session of the client
       * type: number
     * Managed: manage dslink with this token
       * type: bool

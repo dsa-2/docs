@@ -19,6 +19,6 @@
       * type:string
     * Role: permisison role
       * type:string
-    * Max_Session: max number of clients that can connect at same time, default 1
+    * Max Session: max number of clients that can connect at same time, default 1
       * type:number
 

@@ -3,8 +3,8 @@
   * $invokable:config
   * action to add an upstream connection
   * parameters:
-    * Node_Name: the node name to be used in local broker
-    * Connection_Name: the connection name, which will be used as a prefix of the current broker's dsid
+    * Node Name: the node name to be used in local broker
+    * Connection Name: the connection name, which will be used as a prefix of the current broker's dsid
       * upstream broker might create a node name for current broker based on the connection name
     * Url: broker url
     * Token: optional token
